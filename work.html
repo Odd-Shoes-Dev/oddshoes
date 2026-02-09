@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work — Odd Shoes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav class="nav">
+  <div class="nav__inner">
+    <div class="nav__links nav__links--left">
+      <a href="work.html" class="nav__link nav__link--active">Work</a>
+      <a href="about.html" class="nav__link">About</a>
+    </div>
+    <a href="index.html" class="nav__logo">
+      <div class="nav__logo-icon">O</div>
+      <span class="nav__logo-text">Odd Shoes</span>
+    </a>
+    <div class="nav__links nav__links--right">
+      <a href="give-him-50.html" class="nav__link">Give Him 50</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+    </div>
+    <button class="nav__hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ PAGE HERO ═══ -->
+<section class="page-hero">
+  <div class="container">
+    <p class="label label--coral">Portfolio</p>
+    <h1>Our work speaks<br><em>for itself.</em></h1>
+    <p>Every project is a partnership. Every product is a ministry. Here's what we've built together.</p>
+  </div>
+</section>
+
+<!-- ═══ FILTER BAR ═══ -->
+<section style="padding:0 0 2rem;">
+  <div class="container" style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+    <button class="filter-btn" data-filter="web">Web Platforms</button>
+    <button class="filter-btn" data-filter="brand">Brand & Identity</button>
+    <button class="filter-btn" data-filter="saas">SaaS</button>
+  </div>
+</section>
+
+<style>
+.filter-btn {
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .6rem 1.4rem;
+  color: var(--gray-500);
+  border: 1.5px solid var(--gray-200);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.filter-btn:hover,
+.filter-btn.active {
+  color: var(--white);
+  background: var(--black);
+  border-color: var(--black);
+}
+</style>
+
+<!-- ═══ PROJECTS GRID ═══ -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="projects-grid">
+
+      <!-- Featured: FaithFlow -->
+      <div class="project-card project-card--featured fade-up" data-category="mobile">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#e05a3a 0%,#f0735a 50%,#fcd4c9 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;">
+          <span style="font-family:var(--serif);font-size:2.5rem;color:white;opacity:.8;">FaithFlow</span>
+          <span style="font-size:.8rem;color:rgba(255,255,255,.6);letter-spacing:.15em;text-transform:uppercase;">Fintech for the Faithful</span>
+        </div>
+        <div class="project-card__overlay">
+          <span class="project-card__tag">Fintech · Mobile App · Brand</span>
+          <div class="project-card__title">FaithFlow</div>
+        </div>
+      </div>
+
+      <!-- Harambee Connect -->
+      <div class="project-card fade-up" data-category="saas">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a1a1a 0%,#2a2a2a 50%,#444 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;">
+          <span style="font-family:var(--serif);font-size:1.6rem;color:white;opacity:.7;">Harambee Connect</span>
+          <span style="font-size:.7rem;color:rgba(255,255,255,.4);letter-spacing:.12em;text-transform:uppercase;">Community Platform</span>
+        </div>
+        <div class="project-card__overlay">
+          <span class="project-card__tag">SaaS · Web Platform</span>
+          <div class="project-card__title">Harambee Connect</div>
+        </div>
+      </div>
+
+      <!-- Zion Education -->
+      <div class="project-card fade-up" data-category="web">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#f8f6f2 0%,#e8e4dd 50%,#d4d4d4 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;">
+          <span style="font-family:var(--serif);font-size:1.6rem;color:#1a1a1a;opacity:.5;">Zion Education</span>
+          <span style="font-size:.7rem;color:rgba(26,26,26,.3);letter-spacing:.12em;text-transform:uppercase;">EdTech Platform</span>
+        </div>
+        <div class="project-card__overlay">
+          <span class="project-card__tag">EdTech · Web Platform</span>
+          <div class="project-card__title">Zion Education</div>
+        </div>
+      </div>
+
+      <!-- Manna Logistics -->
+      <div class="project-card fade-up" data-category="mobile">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#2d5a27 0%,#4a8a3f 50%,#8fc486 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;">
+          <span style="font-family:var(--serif);font-size:1.6rem;color:white;opacity:.8;">Manna Logistics</span>
+          <span style="font-size:.7rem;color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase;">Last-Mile Delivery</span>
+        </div>
+        <div class="project-card__overlay">
+          <span class="project-card__tag">Logistics · Mobile App</span>
+          <div class="project-card__title">Manna Logistics</div>
+        </div>
+      </div>
+
+      <!-- Agape Health -->
+      <div class="project-card fade-up" data-category="mobile">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a3a5c 0%,#2d6aa0 50%,#7ab8e0 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;">
+          <span style="font-family:var(--serif);font-size:1.6rem;color:white;opacity:.8;">Agape Health</span>
+          <span style="font-size:.7rem;color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase;">Telehealth</span>
+        </div>
+        <div class="project-card__overlay">
+          <span class="project-card__tag">HealthTech · Mobile App</span>
+          <div class="project-card__title">Agape Health</div>
+        </div>
+      </div>
+
+      <!-- Grace Church Brand -->
+      <div class="project-card fade-up" data-category="brand">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#f5e6d3 0%,#e8d0b3 50%,#c4a882 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;">
+          <span style="font-family:var(--serif);font-size:1.6rem;color:#1a1a1a;opacity:.6;">Grace Church</span>
+          <span style="font-size:.7rem;color:rgba(26,26,26,.35);letter-spacing:.12em;text-transform:uppercase;">Brand Identity</span>
+        </div>
+        <div class="project-card__overlay">
+          <span class="project-card__tag">Brand · Church · Identity System</span>
+          <div class="project-card__title">Grace Church Kampala</div>
+        </div>
+      </div>
+
+      <!-- Featured: Jubilee Market -->
+      <div class="project-card project-card--featured fade-up" data-category="web">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#f7c948 0%,#f5a623 50%,#e88d1a 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;">
+          <span style="font-family:var(--serif);font-size:2.5rem;color:white;opacity:.9;">Jubilee Market</span>
+          <span style="font-size:.8rem;color:rgba(255,255,255,.6);letter-spacing:.15em;text-transform:uppercase;">E-Commerce for African Artisans</span>
+        </div>
+        <div class="project-card__overlay">
+          <span class="project-card__tag">E-Commerce · Web · Brand</span>
+          <div class="project-card__title">Jubilee Market</div>
+        </div>
+      </div>
+
+      <!-- Selah Wellness -->
+      <div class="project-card fade-up" data-category="saas">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#6b4c7a 0%,#9b6fb0 50%,#c9a8d8 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;">
+          <span style="font-family:var(--serif);font-size:1.6rem;color:white;opacity:.8;">Selah Wellness</span>
+          <span style="font-size:.7rem;color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase;">Mental Health SaaS</span>
+        </div>
+        <div class="project-card__overlay">
+          <span class="project-card__tag">SaaS · Wellness · Web App</span>
+          <div class="project-card__title">Selah Wellness</div>
+        </div>
+      </div>
+
+      <!-- Cornerstone Capital -->
+      <div class="project-card fade-up" data-category="brand">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a1a1a 0%,#333 50%,#555 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;">
+          <span style="font-family:var(--serif);font-size:1.6rem;color:white;opacity:.6;">Cornerstone Capital</span>
+          <span style="font-size:.7rem;color:rgba(255,255,255,.35);letter-spacing:.12em;text-transform:uppercase;">Investment Firm Brand</span>
+        </div>
+        <div class="project-card__overlay">
+          <span class="project-card__tag">Brand · Finance · Identity</span>
+          <div class="project-card__title">Cornerstone Capital</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS CAROUSEL ═══ -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-header fade-up">
+      <p class="label">Client Words</p>
+      <h2>What founders say</h2>
+    </div>
+    <div class="testimonial fade-up" id="testimonialCarousel">
+      <div class="testimonial__quote" id="quoteText">
+        Odd Shoes didn't just build our app — they understood our mission. They helped us create something that serves both our users and our calling.
+      </div>
+      <div class="testimonial__author" id="authorName">Sarah Namugwanya</div>
+      <div class="testimonial__role" id="authorRole">Founder, FaithFlow · Kampala</div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;display:flex;gap:.5rem;justify-content:center;" class="fade-up">
+      <button onclick="prevTestimonial()" class="btn btn--outline btn--small">←</button>
+      <button onclick="nextTestimonial()" class="btn btn--outline btn--small">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-band">
+  <div class="container fade-up">
+    <h2>Have an idea worth<br>building?</h2>
+    <p>We'd love to hear about your vision. Let's see how we can bring it to life together.</p>
+    <a href="contact.html" class="btn btn--outline-white">Start a Project</a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div style="display:flex;align-items:center;gap:.6rem;">
+          <div class="nav__logo-icon">O</div>
+          <span style="font-family:var(--serif);font-size:1.15rem;font-weight:600;">Odd Shoes</span>
+        </div>
+        <p>Building startups for Christian founders who want to honour God with their business. Based in Kampala, Uganda — serving the world.</p>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">Navigate</div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="give-him-50.html">Give Him 50</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">Services</div>
+        <a href="#">MVP Development</a>
+        <a href="#">Brand & Identity</a>
+        <a href="#">UI/UX Design</a>
+        <a href="#">Growth Strategy</a>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">Connect</div>
+        <a href="#">hello@oddshoes.co</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">Twitter / X</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Odd Shoes. All rights reserved. · <a href="#" style="color:var(--gray-500);">Boring Legal Stuff</a></p>
+      <div class="footer__socials">
+        <a href="#">X</a>
+        <a href="#">Li</a>
+        <a href="#">Ig</a>
+        <a href="#">Wa</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.querySelectorAll('.nav__links').forEach(el => el.classList.toggle('active'));
+}
+
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Filter
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.project-card').forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+// Testimonials
+const testimonials = [
+  { quote: "Odd Shoes didn't just build our app — they understood our mission. They helped us create something that serves both our users and our calling.", name: "Sarah Namugwanya", role: "Founder, FaithFlow · Kampala" },
+  { quote: "In 8 weeks they turned our napkin sketch into a working platform with 500 beta users. The speed was unreal, the quality even better.", name: "David Okello", role: "CEO, Harambee Connect · Nairobi" },
+  { quote: "They built our brand from scratch and it's been the single biggest factor in closing our seed round. Investors constantly comment on how polished we look.", name: "Grace Mutesi", role: "Founder, Jubilee Market · Kigali" },
+  { quote: "What makes Odd Shoes different is they pray with you before sprints. It sounds small but it changes everything about how you build.", name: "Joshua Ssemakula", role: "CTO, Manna Logistics · Kampala" }
+];
+let currentTestimonial = 0;
+
+function showTestimonial(i) {
+  const t = testimonials[i];
+  document.getElementById('quoteText').textContent = t.quote;
+  document.getElementById('authorName').textContent = t.name;
+  document.getElementById('authorRole').textContent = t.role;
+}
+function nextTestimonial() {
+  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+  showTestimonial(currentTestimonial);
+}
+function prevTestimonial() {
+  currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(currentTestimonial);
+}
+</script>
+
+</body>
+</html>
