@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
           <div className="footer__col">
             <div className="footer__col-title">Contact</div>
-            <a href="mailto:hello@oddshoes.co">hello@oddshoes.co</a>
+            <a href="mailto:blueoxrecruit@gmail.com">blueoxrecruit@gmail.com</a>
             <a href="https://wa.me/3197010209759">+31 97 010 209 759</a>
             <p style={{ marginTop: '1rem', fontSize: '.85rem' }}>Kampala, Uganda</p>
           </div>

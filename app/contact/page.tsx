@@ -17,14 +17,31 @@ export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, send to backend/email service
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', service: '', budget: '', message: '', referral: '' });
-    }, 3000);
+    
+    try {
+      const response = await fetch('/api/submit-contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        setIsSubmitted(true);
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({ name: '', email: '', service: '', budget: '', message: '', referral: '' });
+        }, 3000);
+      } else {
+        alert('Failed to send message. Please try again or email us directly at blueoxrecruit@gmail.com');
+      }
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
+      alert('Failed to send message. Please try again or email us directly at blueoxrecruit@gmail.com');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -91,7 +108,7 @@ export default function ContactPage() {
 
               <div className="contact-detail">
                 <p className="label">Email</p>
-                <a href="mailto:hello@oddshoes.co">hello@oddshoes.co</a>
+                <a href="mailto:blueoxrecruit@gmail.com">blueoxrecruit@gmail.com</a>
               </div>
 
               <div className="contact-detail">
@@ -119,7 +136,7 @@ export default function ContactPage() {
                   <Image src="/icons/whatsapp.svg" alt="" width={18} height={18} style={{ filter: 'brightness(0) invert(1)' }} />
                   WhatsApp Us
                 </a>
-                <a href="mailto:hello@oddshoes.co?subject=Book a Call" className="btn btn--outline btn--small" style={{ display: 'inline-flex', alignItems: 'center', gap: '.4rem' }}>
+                <a href="mailto:blueoxrecruit@gmail.com?subject=Book a Call" className="btn btn--outline btn--small" style={{ display: 'inline-flex', alignItems: 'center', gap: '.4rem' }}>
                   <Image src="/icons/calendar.svg" alt="" width={18} height={18} />
                   Book a Call
                 </a>

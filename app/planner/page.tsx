@@ -34,19 +34,35 @@ export default function PlannerPage() {
     setFormData({ ...formData, services });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, send to backend/email service
-    console.log('Project Planner Submission:', formData);
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '', email: '', company: '', phone: '', projectType: '',
-        description: '', services: [], startMonth: '', startYear: '',
-        launchMonth: '', launchYear: '', budget: '', hearAbout: ''
+    
+    try {
+      const response = await fetch('/api/submit-planner', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
       });
-    }, 5000);
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        setIsSubmitted(true);
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({
+            name: '', email: '', company: '', phone: '', projectType: '',
+            description: '', services: [], startMonth: '', startYear: '',
+            launchMonth: '', launchYear: '', budget: '', hearAbout: ''
+          });
+        }, 5000);
+      } else {
+        alert('Failed to submit planner. Please try again or email us directly at blueoxrecruit@gmail.com');
+      }
+    } catch (error) {
+      console.error('Error submitting planner:', error);
+      alert('Failed to submit planner. Please try again or email us directly at blueoxrecruit@gmail.com');
+    }
   };
 
   const currentYear = new Date().getFullYear();

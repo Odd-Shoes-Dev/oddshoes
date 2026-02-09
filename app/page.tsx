@@ -60,7 +60,7 @@ export default function Home() {
               </div>
               <h3 className="get-started-card__title">Connect</h3>
               <p className="get-started-card__text">
-                <a href="mailto:hello@oddshoes.co" style={{ color: 'var(--coral)', textDecoration: 'underline' }}>hello@oddshoes.co</a>
+                <a href="mailto:blueoxrecruit@gmail.com" style={{ color: 'var(--coral)', textDecoration: 'underline' }}>blueoxrecruit@gmail.com</a>
               </p>
               <p className="get-started-card__description">Drop us an email and let's start a conversation.</p>
             </div>
