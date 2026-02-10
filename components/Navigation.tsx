@@ -60,6 +60,13 @@ export default function Navigation() {
           >
             About
           </Link>
+          <Link 
+            href="/services" 
+            className={`nav__link ${isActive('/services') ? 'nav__link--active' : ''}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Services
+          </Link>
         </div>
         <Link href="/" className="nav__logo">
           <SoleLogo size={50} className="nav__logo-icon" />

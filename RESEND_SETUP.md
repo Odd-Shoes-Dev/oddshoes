@@ -51,17 +51,17 @@ npm run dev
 1. Go to `http://localhost:3000/planner`
 2. Fill out the form
 3. Submit
-4. Check your email at `blueoxrecruit@gmail.com`
+4. Check your email at `buildit@oddshoes.dev`
 
 ## What Happens Now
 
 **Project Planner:**
-- Form submissions at `/planner` → Email to `blueoxrecruit@gmail.com`
+- Form submissions at `/planner` → Email to `buildit@oddshoes.dev`
 - Beautiful HTML email with all project details
 - Services, budget, timeline, description included
 
 **Contact Form:**
-- Form submissions at `/contact` → Email to `blueoxrecruit@gmail.com`
+- Form submissions at `/contact` → Email to `buildit@oddshoes.dev`
 - Clean email with contact info and message
 
 ## Email Templates Include:

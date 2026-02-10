@@ -57,11 +57,11 @@ export default function PlannerPage() {
           });
         }, 5000);
       } else {
-        alert('Failed to submit planner. Please try again or email us directly at blueoxrecruit@gmail.com');
+        alert('Failed to submit planner. Please try again or email us directly at buildit@oddshoes.dev');
       }
     } catch (error) {
       console.error('Error submitting planner:', error);
-      alert('Failed to submit planner. Please try again or email us directly at blueoxrecruit@gmail.com');
+      alert('Failed to submit planner. Please try again or email us directly at buildit@oddshoes.dev');
     }
   };
 
@@ -320,10 +320,10 @@ export default function PlannerPage() {
               <Image src="/icons/whatsapp.svg" alt="" width={20} height={20} style={{ filter: 'brightness(0) invert(1)' }} />
               WhatsApp Us
             </a>
-            <Link href="/contact" className="btn btn--outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }}>
+            <a href="https://calendly.com/builtbyoddshoes" target="_blank" rel="noopener noreferrer" className="btn btn--outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }}>
               <Image src="/icons/calendar.svg" alt="" width={20} height={20} />
               Book a Call
-            </Link>
+            </a>
           </div>
         </FadeUp>
       </section>

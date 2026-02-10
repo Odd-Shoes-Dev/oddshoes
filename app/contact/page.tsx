@@ -36,11 +36,11 @@ export default function ContactPage() {
           setFormData({ name: '', email: '', service: '', budget: '', message: '', referral: '' });
         }, 3000);
       } else {
-        alert('Failed to send message. Please try again or email us directly at blueoxrecruit@gmail.com');
+        alert('Failed to send message. Please try again or email us directly at buildit@oddshoes.dev');
       }
     } catch (error) {
       console.error('Error submitting contact form:', error);
-      alert('Failed to send message. Please try again or email us directly at blueoxrecruit@gmail.com');
+      alert('Failed to send message. Please try again or email us directly at buildit@oddshoes.dev');
     }
   };
 
@@ -108,7 +108,7 @@ export default function ContactPage() {
 
               <div className="contact-detail">
                 <p className="label">Email</p>
-                <a href="mailto:blueoxrecruit@gmail.com">blueoxrecruit@gmail.com</a>
+                <a href="mailto:buildit@oddshoes.dev">buildit@oddshoes.dev</a>
               </div>
 
               <div className="contact-detail">
@@ -136,7 +136,7 @@ export default function ContactPage() {
                   <Image src="/icons/whatsapp.svg" alt="" width={18} height={18} style={{ filter: 'brightness(0) invert(1)' }} />
                   WhatsApp Us
                 </a>
-                <a href="mailto:blueoxrecruit@gmail.com?subject=Book a Call" className="btn btn--outline btn--small" style={{ display: 'inline-flex', alignItems: 'center', gap: '.4rem' }}>
+                <a href="https://calendly.com/builtbyoddshoes" target="_blank" rel="noopener noreferrer" className="btn btn--outline btn--small" style={{ display: 'inline-flex', alignItems: 'center', gap: '.4rem' }}>
                   <Image src="/icons/calendar.svg" alt="" width={18} height={18} />
                   Book a Call
                 </a>
