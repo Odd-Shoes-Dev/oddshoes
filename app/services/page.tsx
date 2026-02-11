@@ -38,21 +38,28 @@ export default function ServicesPage() {
         <div className="container">
           <div className="services-identity__grid">
             <div className="services-identity__card">
+              <div className="services-identity__card-icon">
+                <Image src="/icons/team.svg" alt="" width={64} height={64} />
+              </div>
               <h3>Who We Are</h3>
               <p>Worshippers, musicians, and pastors blessed by God to be engineers, based in Kampala, Uganda.</p>
             </div>
             <div className="services-identity__card">
+              <div className="services-identity__card-icon">
+                <Image src="/icons/target.svg" alt="" width={64} height={64} />
+              </div>
               <h3>Our Mission</h3>
               <p>Build production-grade apps for Christian founders without technical teams. 50% of profits go to Kingdom work (Give Him 50 model).</p>
             </div>
             <div className="services-identity__card">
+              <div className="services-identity__card-icon">
+                <Image src="/icons/star.svg" alt="" width={64} height={64} />
+              </div>
               <h3>What Makes Us Different</h3>
-              <ul>
-                <li>5-day MVPs, 14-day complete products</li>
-                <li>Production-grade tech (Django, React, PostgreSQL)</li>
-                <li>Custom AI agents & automation</li>
-                <li>Built from worship, not just work</li>
-              </ul>
+              <p>5-day MVPs, 14-day complete products</p>
+              <p>Production-grade tech (Django, React, PostgreSQL)</p>
+              <p>Custom AI agents & automation</p>
+              <p>Built from worship, not just work</p>
             </div>
           </div>
         </div>
@@ -447,34 +454,6 @@ export default function ServicesPage() {
                 <li>Cursor</li>
                 <li>Claude Code</li>
                 <li>GitHub Copilot</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Monthly Costs Reference */}
-      <section className="costs-section">
-        <div className="container">
-          <h2 className="section-title">Monthly Running Costs</h2>
-          <p className="section-subtitle">Transparent pricing. No hidden fees.</p>
-
-          <div className="costs-grid">
-            <div className="cost-card">
-              <h3>OpenClaw</h3>
-              <ul>
-                <li>Software: <strong>Free</strong> (open-source)</li>
-                <li>Hosting: <strong>$10-50/month</strong></li>
-                <li>AI APIs: <strong>$30-150/month</strong></li>
-              </ul>
-              <p className="cost-card__total">Total: ~$40-200/month</p>
-            </div>
-
-            <div className="cost-card">
-              <h3>Genesis/Kingdom Products</h3>
-              <ul>
-                <li>Hosting: <strong>$10-100/month</strong> (depending on scale)</li>
-                <li>Other costs: <strong>None</strong> unless you add paid services</li>
               </ul>
             </div>
           </div>

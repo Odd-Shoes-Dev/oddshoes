@@ -109,54 +109,34 @@ export default function AboutPage() {
           </FadeUp>
           <FadeUp className="team-grid">
             <div className="team-member">
-              <div className="team-member__photo" style={{ background: 'var(--coral)', color: 'white' }}>JK</div>
-              <div className="team-member__name">John Katumba</div>
+              <div className="team-member__photo" style={{ background: 'var(--coral)', color: 'white' }}>OB</div>
+              <div className="team-member__name">Obed Bagyenyi</div>
               <div className="team-member__divider"></div>
               <div className="team-member__role">Founder & Lead</div>
             </div>
             <div className="team-member">
-              <div className="team-member__photo" style={{ background: '#2d5a27', color: 'white' }}>AN</div>
-              <div className="team-member__name">Amara Nalubega</div>
-              <div className="team-member__divider"></div>
-              <div className="team-member__role">Creative Director</div>
-            </div>
-            <div className="team-member">
-              <div className="team-member__photo" style={{ background: '#1a3a5c', color: 'white' }}>SO</div>
-              <div className="team-member__name">Samuel Ochieng</div>
-              <div className="team-member__divider"></div>
-              <div className="team-member__role">Lead Developer</div>
-            </div>
-            <div className="team-member">
-              <div className="team-member__photo" style={{ background: '#6b4c7a', color: 'white' }}>RN</div>
-              <div className="team-member__name">Ruth Nakato</div>
-              <div className="team-member__divider"></div>
-              <div className="team-member__role">UI/UX Designer</div>
-            </div>
-            <div className="team-member">
-              <div className="team-member__photo" style={{ background: '#f5a623', color: 'white' }}>DM</div>
-              <div className="team-member__name">Daniel Mugisha</div>
+              <div className="team-member__photo" style={{ background: '#f5a623', color: 'white' }}>NE</div>
+              <div className="team-member__name">Nahabwe Edwin</div>
               <div className="team-member__divider"></div>
               <div className="team-member__role">Full-Stack Dev</div>
             </div>
             <div className="team-member">
-              <div className="team-member__photo" style={{ background: '#c4a882', color: 'white' }}>FS</div>
-              <div className="team-member__name">Faith Ssebunya</div>
-              <div className="team-member__divider"></div>
-              <div className="team-member__role">Growth & Strategy</div>
-            </div>
-            <div className="team-member">
-              <div className="team-member__photo" style={{ background: '#e05a3a', color: 'white' }}>PK</div>
-              <div className="team-member__name">Paul Kigozi</div>
+              <div className="team-member__photo" style={{ background: '#e05a3a', color: 'white' }}>DL</div>
+              <div className="team-member__name">Daniel L.</div>
               <div className="team-member__divider"></div>
               <div className="team-member__role">Backend Engineer</div>
             </div>
             <div className="team-member">
-              <div className="team-member__photo" style={{ background: '#8fc486', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Image src="/icons/paw.svg" alt="" width={40} height={40} />
-              </div>
-              <div className="team-member__name">Simba</div>
+              <div className="team-member__photo" style={{ background: '#3a7bd5', color: 'white' }}>IA</div>
+              <div className="team-member__name">Ian Abenaitwe</div>
               <div className="team-member__divider"></div>
-              <div className="team-member__role">Office Dog</div>
+              <div className="team-member__role">AI Engineer</div>
+            </div>
+            <div className="team-member">
+              <div className="team-member__photo" style={{ background: '#6b4c7a', color: 'white' }}>OJ</div>
+              <div className="team-member__name">Opakrwoth Jonathan</div>
+              <div className="team-member__divider"></div>
+              <div className="team-member__role">Graphics Designer</div>
             </div>
           </FadeUp>
         </div>

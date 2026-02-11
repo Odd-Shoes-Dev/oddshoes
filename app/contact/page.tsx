@@ -55,7 +55,7 @@ export default function ContactPage() {
   const faqs = [
     {
       question: 'How long does an MVP take to build?',
-      answer: 'Typically 6–10 weeks from kickoff to launch. Our Strategy Sprint takes the first 2 weeks, then we build and ship in 4–8 weekly sprints depending on complexity.'
+      answer: '5 days from kickoff to launch with our Genesis Build package. We move fast with a focused scope, delivering a working MVP in under a week. For more complex builds, our Kingdom Builder takes 14 days + 6 months of support.'
     },
     {
       question: 'Do I need a technical co-founder?',

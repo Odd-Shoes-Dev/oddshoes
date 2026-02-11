@@ -358,7 +358,7 @@ export const projects: Project[] = [
     name: 'Workflowe',
     tag: 'Project Tracking App',
     category: 'mobile',
-    url: 'https://workflowe.app',
+    url: 'https://play.google.com/store/apps/details?id=ug.global.bro&hl=en',
     gradient: 'linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)',
     subtitle: 'Simple project management for teams on the go',
     logoPath: '/images/workflowe/logo.png',

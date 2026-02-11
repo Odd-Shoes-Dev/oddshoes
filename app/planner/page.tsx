@@ -230,7 +230,7 @@ export default function PlannerPage() {
 
             {/* BUDGET */}
             <FadeUp className="planner-section">
-              <h2 className="planner-section__title">Likely Budget *</h2>
+              <h2 className="planner-section__title">Your Budget *</h2>
               <div className="planner-options">
                 {['$2,000 – $5,000', '$5,000 – $15,000', '$15,000 – $30,000', '$30,000 – $50,000', 'Over $50,000', 'Not Sure Yet'].map(range => (
                   <label key={range} className="planner-option">
