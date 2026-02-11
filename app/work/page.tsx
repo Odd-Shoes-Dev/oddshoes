@@ -16,7 +16,7 @@ export default function WorkPage() {
   return (
     <>
       {/* Hero */}
-      <section className="hero">
+      <section className="hero" style={{ minHeight: '45vh', paddingTop: '5rem', paddingBottom: '2rem' }}>
         <div className="hero__content container">
           <p className="label label--coral hero__label">Portfolio</p>
           <h1>Our Work</h1>
@@ -27,7 +27,7 @@ export default function WorkPage() {
       </section>
 
       {/* Projects Section */}
-      <section className="section">
+      <section className="section" style={{ paddingTop: '2rem', paddingBottom: '3rem' }}>
         <div className="container">
           {/* Filter Buttons */}
           <FadeUp>
@@ -36,7 +36,7 @@ export default function WorkPage() {
               justifyContent: 'center', 
               gap: '1rem', 
               flexWrap: 'wrap',
-              marginBottom: '3rem'
+              marginBottom: '2rem'
             }}>
               <button 
                 className={`btn btn--small ${filter === 'all' ? 'btn--primary' : 'btn--outline'}`}

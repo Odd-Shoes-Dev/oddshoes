@@ -25,39 +25,45 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
+      <section className="hero" style={{ minHeight: '35vh', display: 'flex', alignItems: 'center', paddingTop: '5rem', paddingBottom: '2rem' }}>
         <div className="container">
           <FadeUp>
-            <Link href="/work" className="label label--coral" style={{ display: 'inline-block', marginBottom: '1rem' }}>
+            <Link href="/work" className="label label--coral" style={{ display: 'inline-block', marginBottom: '0.5rem' }}>
               ← Back to Portfolio
             </Link>
-            <span className="label" style={{ marginLeft: '1rem', background: 'var(--gray-100)', color: 'var(--gray-600)' }}>
+            <span className="label" style={{ marginLeft: '1rem', background: 'var(--gray-100)', color: 'var(--gray-600)', fontSize: '0.8rem' }}>
               {project.tag}
             </span>
-            <h1 style={{ fontSize: '3.5rem', marginTop: '1rem', marginBottom: '1.5rem' }}>{project.name}</h1>
-            <p style={{ fontSize: '1.5rem', color: 'var(--gray-600)', maxWidth: '800px' }}>
+            <h1 style={{ fontSize: '2.5rem', marginTop: '0.8rem', marginBottom: '0.8rem' }}>{project.name}</h1>
+            <p style={{ fontSize: '1.1rem', color: 'var(--gray-600)', maxWidth: '800px' }}>
               {project.subtitle}
             </p>
-            <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <a href={project.url} target="_blank" rel="noopener noreferrer" className="btn btn--primary">
-                View Live Site →
-              </a>
-              <Link href="/planner" className="btn btn--outline">
-                Start Your Project
-              </Link>
-            </div>
           </FadeUp>
         </div>
       </section>
 
       {/* Project Screenshots Slideshow */}
-      <section style={{ background: 'var(--gray-50)', padding: '4rem 0' }}>
+      <section style={{ background: 'var(--gray-50)', padding: '2rem 0' }}>
         <div className="container">
           <FadeUp>
             <ProjectSlideshow 
               imageFolder={project.imageFolder || project.slug} 
               screenshotCount={project.screenshotCount || 0}
             />
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* Action Buttons */}
+      <section style={{ padding: '1.5rem 0' }}>
+        <div className="container">
+          <FadeUp style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <a href={project.url} target="_blank" rel="noopener noreferrer" className="btn btn--primary">
+              View Live Site →
+            </a>
+            <Link href="/planner" className="btn btn--outline">
+              Start Your Project
+            </Link>
           </FadeUp>
         </div>
       </section>
@@ -130,46 +136,25 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       {/* Key Features */}
       <section className="section">
         <div className="container">
-          <FadeUp className="section-header" style={{ textAlign: 'center' }}>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: '2.5rem' }}>Key Features</h2>
+          <FadeUp className="section-header" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <h2 style={{ fontFamily: 'var(--serif)', fontSize: '2.5rem', marginBottom: '0.5rem' }}>Key Features</h2>
             <p>What makes {project.name} special</p>
           </FadeUp>
           
-          <FadeUp>
-            <div style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
-              gap: '2rem',
-              marginTop: '3rem'
-            }}>
-              {project.features.map((feature, index) => (
-                <div 
-                  key={index}
-                  style={{ 
-                    background: 'var(--gray-50)', 
-                    padding: '2rem', 
-                    borderRadius: '8px',
-                    borderLeft: '4px solid var(--coral)'
-                  }}
-                >
-                  <div style={{ 
-                    width: '40px', 
-                    height: '40px', 
-                    background: 'var(--coral)', 
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'white',
-                    fontWeight: 'bold',
-                    marginBottom: '1rem'
-                  }}>
-                    {index + 1}
+          <FadeUp className="get-started-grid">
+            {project.features.map((feature, index) => {
+              const icons = ['shield.svg', 'lightbulb.svg', 'code.svg', 'user.svg', 'water.svg', 'chart.svg'];
+              const icon = icons[index % icons.length];
+              
+              return (
+                <div key={index} className="get-started-card">
+                  <div className="get-started-card__icon">
+                    <Image src={`/icons/${icon}`} alt="" width={64} height={64} />
                   </div>
-                  <p style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>{feature}</p>
+                  <h3 className="get-started-card__title">{feature}</h3>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </FadeUp>
         </div>
       </section>

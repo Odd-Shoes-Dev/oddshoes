@@ -173,9 +173,9 @@ p { font-size: 1.05rem; color: var(--gray-600); line-height: 1.8; }
   background: var(--black);
   transition: var(--transition);
 }
-.nav__hamburger--active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav__hamburger--active span:nth-child(1) { transform: rotate(45deg) translate(4px, 6px); }
 .nav__hamburger--active span:nth-child(2) { opacity: 0; }
-.nav__hamburger--active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+.nav__hamburger--active span:nth-child(3) { transform: rotate(-45deg) translate(3px, -6px); }
 
 /* ─── HERO ─── */
 .hero {
@@ -1403,11 +1403,40 @@ p { font-size: 1.05rem; color: var(--gray-600); line-height: 1.8; }
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: var(--nav-h); left: 0; right: 0; bottom: 0;
-    background: var(--white);
-    padding: 2rem;
-    gap: 1.5rem;
+    top: var(--nav-h); 
+    left: 0; 
+    right: 0;
+    background: white;
+    padding: 1rem 0;
+    gap: 0;
     z-index: 999;
+    border-top: 1px solid var(--gray-200);
+    min-height: 250px;
+  }
+  .nav__links.active .nav__link {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-600);
+  }
+  .nav__links.active .nav__link:last-child {
+    border-bottom: none;
+    
+  }
+  
+  /* Overlay to close menu */
+  .nav__overlay {
+    display: none;
+  }
+  .nav__overlay.active {
+    display: block;
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 998;
   }
   .projects-grid { grid-template-columns: 1fr; }
   .project-card--featured { aspect-ratio: 4/3; }

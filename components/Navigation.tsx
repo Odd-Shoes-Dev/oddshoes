@@ -42,8 +42,18 @@ export default function Navigation() {
 
   const isActive = (path: string) => pathname === path;
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className={`nav ${isVisible ? '' : 'nav--hidden'}`}>
+      {isMenuOpen && (
+        <div 
+          className={`nav__overlay ${isMenuOpen ? 'active' : ''}`}
+          onClick={closeMenu}
+        ></div>
+      )}
       <div className="nav__inner">
         <div className={`nav__links nav__links--left ${isMenuOpen ? 'active' : ''}`}>
           <Link 

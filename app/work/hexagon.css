@@ -94,34 +94,36 @@
   grid-row: span 1;
 }
 
-/* Offset pattern for honeycomb effect */
-/* Second row - shift right and up (4 items) */
-.hex:nth-child(n + 6):nth-child(-n + 9) {
-  margin-top: -50px;
-  margin-left: calc(50% + 22.5px);
-}
+/* Offset pattern for honeycomb effect - only on desktop */
+@media (min-width: 1025px) {
+  /* Second row - shift right and up (4 items) */
+  .hex:nth-child(n + 6):nth-child(-n + 9) {
+    margin-top: -50px;
+    margin-left: calc(50% + 22.5px);
+  }
 
-/* Third row - center 3 items */
-.hex:nth-child(10) {
-  grid-column: 2;
-  margin-top: -50px;
-}
+  /* Third row - center 3 items */
+  .hex:nth-child(10) {
+    grid-column: 2;
+    margin-top: -50px;
+  }
 
-.hex:nth-child(11),
-.hex:nth-child(12) {
-  margin-top: -50px;
-}
+  .hex:nth-child(11),
+  .hex:nth-child(12) {
+    margin-top: -50px;
+  }
 
-/* Fourth row - center 2 items with honeycomb offset */
-.hex:nth-child(13) {
-  grid-column: 2;
-  margin-top: -50px;
-  margin-left: calc(50% + 22.5px);
-}
+  /* Fourth row - center 2 items with honeycomb offset */
+  .hex:nth-child(13) {
+    grid-column: 2;
+    margin-top: -50px;
+    margin-left: calc(50% + 22.5px);
+  }
 
-.hex:nth-child(14) {
-  margin-top: -50px;
-  margin-left: calc(50% + 22.5px);
+  .hex:nth-child(14) {
+    margin-top: -50px;
+    margin-left: calc(50% + 22.5px);
+  }
 }
 
 /* Secondary row offset */
@@ -137,66 +139,51 @@
 @media (max-width: 1024px) {
   .hexagon-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    gap: 20px 25px;
+    max-width: 100%;
+    margin: 0 auto;
   }
   
-  .hex:nth-child(10n + 6),
-  .hex:nth-child(10n + 7),
-  .hex:nth-child(10n + 8),
-  .hex:nth-child(10n + 9),
-  .hex:nth-child(10n + 10) {
-    margin-top: 0;
-    margin-left: 0;
-  }
-  
-  .hex:nth-child(8n + 5),
-  .hex:nth-child(8n + 6),
-  .hex:nth-child(8n + 7),
-  .hex:nth-child(8n + 8) {
-    margin-top: -70px;
-    margin-left: calc(50% + 12.5px);
+  .hex:nth-child(n + 6) {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
   }
 }
 
 @media (max-width: 768px) {
+  .hex-grid-wrapper {
+    padding: 1.5rem 0;
+    margin: 0 -1rem;
+  }
+  
   .hexagon-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 90%;
+    gap: 18px 20px;
+    max-width: 100%;
   }
   
-  .hex:nth-child(8n + 5),
-  .hex:nth-child(8n + 6),
-  .hex:nth-child(8n + 7),
-  .hex:nth-child(8n + 8) {
-    margin-top: 0;
-    margin-left: 0;
-  }
-  
-  .hex:nth-child(6n + 4),
-  .hex:nth-child(6n + 5),
-  .hex:nth-child(6n + 6) {
-    margin-top: -60px;
-    margin-left: calc(50% + 10px);
+  .hex:nth-child(n + 4) {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .hex-grid-wrapper {
+    padding: 1rem 0;
+    margin: 0 -0.5rem;
+  }
+  
   .hexagon-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 15px;
+    max-width: 100%;
   }
   
-  .hex:nth-child(6n + 4),
-  .hex:nth-child(6n + 5),
-  .hex:nth-child(6n + 6) {
-    margin-top: 0;
-    margin-left: 0;
-  }
-  
-  .hex:nth-child(4n + 3),
-  .hex:nth-child(4n + 4) {
-    margin-top: -50px;
-    margin-left: calc(50% + 7.5px);
+  .hex:nth-child(n) {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    grid-column: auto !important;
   }
 }
+
