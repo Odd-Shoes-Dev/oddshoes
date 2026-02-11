@@ -26,6 +26,10 @@ export default function AboutPage() {
       {/* ═══ OUR STORY ═══ */}
       <section className="section">
         <div className="container">
+          <FadeUp style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <p className="label label--coral">Who We Are</p>
+            <p style={{ fontSize: '1.1rem', fontWeight: '500', color: 'var(--coral)' }}>The complete technical team Kingdom builders don't have.</p>
+          </FadeUp>
           <FadeUp className="two-col">
             <div>
               <p className="label label--coral" style={{ marginBottom: '1rem' }}>Our Story</p>

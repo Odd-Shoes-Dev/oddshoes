@@ -7,109 +7,65 @@ import './work/hexagon.css';
 export default function Home() {
   return (
     <>
+      {/* ═══ MARQUEE ═══ */}
+      <div className="hero__marquee-wrapper">
+        <div className="hero__marquee">
+          <p className="label label--coral hero__label">100+ MVPs shipped • 15+ products live • 5-14 days to launch • 50% to His Kingdom</p>
+          <p className="label label--coral hero__label">100+ MVPs shipped • 15+ products live • 5-14 days to launch • 50% to His Kingdom</p>
+          <p className="label label--coral hero__label">100+ MVPs shipped • 15+ products live • 5-14 days to launch • 50% to His Kingdom</p>
+        </div>
+      </div>
+
       {/* ═══ HERO ═══ */}
       <section className="hero">
         <div className="hero__content container">
-          <p className="label label--coral hero__label">100+ MVPs shipped • 15+ products live • 5-14 days to launch • 50% to His Kingdom</p>
           <h1>A <em>higher</em> calling.<br />A better startup.</h1>
           <p className="hero__subtitle">We build MVPs, craft brands, and accelerate growth for founders who want to honour God with their business.</p>
-          <p className="label label--coral hero__label" style={{ fontSize: '.95rem',marginTop: '1.5rem', lineHeight: '1.8' }}>
-            The complete technical team Kingdom builders don't have.
-          </p>
         </div>
       </section>
 
       {/* ═══ SERVICES PREVIEW ═══ */}
-      <section className="section section--services-preview" style={{ paddingTop: '4rem' }}>
+      <section className="section section--services-preview" style={{ paddingTop: '0' }}>
         <div className="container">
-          <FadeUp className="section-header" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: '2.5rem', marginBottom: '1rem' }}>Services we Offer</h2>
+          <FadeUp className="section-header" style={{ textAlign: 'center', marginBottom: '0.5rem' }}>
+            <h2 style={{ fontFamily: 'var(--serif)', fontSize: '2.5rem', marginBottom: '4rem' }}>Services we Offer</h2>
           </FadeUp>
           <FadeUp className="get-started-grid">
             <Link href="/services#genesis-build" className="get-started-card">
               <div className="get-started-card__icon">
-                <Image src="/icons/rocket.svg" alt="" width={64} height={64} />
+                <Image src="/icons/rocket.svg" alt="" width={60} height={60} />
               </div>
               <h3 className="get-started-card__title">Genesis Build</h3>
               <p className="get-started-card__description">5-day MVP for pre-revenue founders. Single feature, production-ready, launched Friday.</p>
+              <div className="get-started-card__arrow">
+                <Image src="/icons/arrow-right.svg" alt="" width={50} height={50} />
+              </div>
             </Link>
             <Link href="/services#kingdom-builder" className="get-started-card">
               <div className="get-started-card__icon">
-                <Image src="/icons/diamond.svg" alt="" width={64} height={64} />
+                <Image src="/icons/diamond.svg" alt="" width={60} height={60} />
               </div>
               <h3 className="get-started-card__title">Kingdom Builder</h3>
               <p className="get-started-card__description">Complete system with brand, multi-feature app, and 6 months fractional CTO support.</p>
+              <div className="get-started-card__arrow">
+                <Image src="/icons/arrow-right.svg" alt="" width={50} height={50} />
+              </div>
             </Link>
             <Link href="/services#ai-automation" className="get-started-card">
               <div className="get-started-card__icon">
-                <Image src="/icons/lightbulb.svg" alt="" width={64} height={64} />
+                <Image src="/icons/lightbulb.svg" alt="" width={60} height={60} />
               </div>
               <h3 className="get-started-card__title">AI & Automation</h3>
               <p className="get-started-card__description">OpenClaw deployment, custom AI agents, and workflow automation for your business.</p>
+              <div className="get-started-card__arrow">
+                <Image src="/icons/arrow-right.svg" alt="" width={50} height={50} />
+              </div>
             </Link>
           </FadeUp>
           <div className="hero__cta" style={{ marginTop: '3rem' }}>
             <Link href="/planner" className="btn btn--primary">Launch Your MVP</Link>
             <Link href="/work" className="btn btn--outline">See Our Work</Link>
           </div>
-        </div>
-      </section>
-
-      {/* ═══ STATS ═══ */}
-      <section className="section section--cream">
-        <div className="container">
-          <FadeUp className="stats">
-            <div>
-              <div className="stat__number">87%</div>
-              <div className="stat__label">Of our founders secure funding</div>
-            </div>
-            <div>
-              <div className="stat__number">3.2×</div>
-              <div className="stat__label">Average revenue growth</div>
-            </div>
-            <div>
-              <div className="stat__number">40+</div>
-              <div className="stat__label">MVPs launched & counting</div>
-            </div>
-            <div>
-              <div className="stat__number">50%</div>
-              <div className="stat__label">Of profits given to the Kingdom</div>
-            </div>
-          </FadeUp>
-        </div>
-      </section>
-
-      {/* ═══ GET STARTED ═══ */}
-      <section className="section">
-        <div className="container">
-          <FadeUp className="get-started-grid">
-            <div className="get-started-card">
-              <div className="get-started-card__icon">
-                <Image src="/icons/planner.svg" alt="" width={64} height={64} />
-              </div>
-              <h3 className="get-started-card__title">Project Planner</h3>
-              <p className="get-started-card__text">Interested in working with us? Launch our proposal planner to get started.</p>
-              <Link href="/planner" className="btn btn--outline btn--small">Launch It</Link>
-            </div>
-            <div className="get-started-card">
-              <div className="get-started-card__icon">
-                <Image src="/icons/message.svg" alt="" width={64} height={64} />
-              </div>
-              <h3 className="get-started-card__title">Connect</h3>
-              <p className="get-started-card__text">
-                <a href="mailto:buildit@oddshoes.dev" style={{ color: 'var(--coral)', textDecoration: 'underline' }}>buildit@oddshoes.dev</a>
-              </p>
-              <p className="get-started-card__description">Drop us an email and let's start a conversation.</p>
-            </div>
-            <div className="get-started-card">
-              <div className="get-started-card__icon">
-                <Image src="/icons/calendar.svg" alt="" width={64} height={64} />
-              </div>
-              <h3 className="get-started-card__title">Calendar</h3>
-              <p className="get-started-card__text">Schedule a time to talk to us and get things moving.</p>
-              <a href="https://calendly.com/builtbyoddshoes" target="_blank" rel="noopener noreferrer" className="btn btn--outline btn--small">Book In</a>
-            </div>
-          </FadeUp>
         </div>
       </section>
 
@@ -176,6 +132,40 @@ export default function Home() {
 
           <FadeUp style={{ textAlign: 'center', marginTop: '3rem' }}>
             <Link href="/work" className="btn btn--outline btn--small">View All Projects →</Link>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* ═══ GET STARTED ═══ */}
+      <section className="section">
+        <div className="container">
+          <FadeUp className="get-started-grid">
+            <div className="get-started-card">
+              <div className="get-started-card__icon">
+                <Image src="/icons/planner.svg" alt="" width={64} height={64} />
+              </div>
+              <h3 className="get-started-card__title">Project Planner</h3>
+              <p className="get-started-card__text">Interested in working with us? Launch our proposal planner to get started.</p>
+              <Link href="/planner" className="btn btn--outline btn--small">Launch It</Link>
+            </div>
+            <div className="get-started-card">
+              <div className="get-started-card__icon">
+                <Image src="/icons/message.svg" alt="" width={64} height={64} />
+              </div>
+              <h3 className="get-started-card__title">Connect</h3>
+              <p className="get-started-card__text">
+                <a href="mailto:buildit@oddshoes.dev" style={{ color: 'var(--coral)', textDecoration: 'underline' }}>buildit@oddshoes.dev</a>
+              </p>
+              <p className="get-started-card__description">Drop us an email and let's start a conversation.</p>
+            </div>
+            <div className="get-started-card">
+              <div className="get-started-card__icon">
+                <Image src="/icons/calendar.svg" alt="" width={64} height={64} />
+              </div>
+              <h3 className="get-started-card__title">Calendar</h3>
+              <p className="get-started-card__text">Schedule a time to talk to us and get things moving.</p>
+              <a href="https://calendly.com/builtbyoddshoes" target="_blank" rel="noopener noreferrer" className="btn btn--outline btn--small">Book In</a>
+            </div>
           </FadeUp>
         </div>
       </section>
