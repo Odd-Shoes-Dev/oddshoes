@@ -55,7 +55,8 @@ export default function Navigation() {
         ></div>
       )}
       <div className="nav__inner">
-        <div className={`nav__links nav__links--left ${isMenuOpen ? 'active' : ''}`}>
+        {/* Desktop: Split navigation */}
+        <div className="nav__links nav__links--left">
           <Link 
             href="/work" 
             className={`nav__link ${isActive('/work') ? 'nav__link--active' : ''}`}
@@ -78,6 +79,7 @@ export default function Navigation() {
             Services
           </Link>
         </div>
+        
         <Link href="/" className="nav__logo">
           <SoleLogo size={50} className="nav__logo-icon" />
           <span style={{ 
@@ -109,7 +111,8 @@ export default function Navigation() {
             }}></span>
           </span>
         </Link>
-        <div className={`nav__links nav__links--right ${isMenuOpen ? 'active' : ''}`}>
+        
+        <div className="nav__links nav__links--right">
           <Link 
             href="/give-him-50" 
             className={`nav__link ${isActive('/give-him-50') ? 'nav__link--active' : ''}`}
@@ -125,6 +128,16 @@ export default function Navigation() {
             Contact
           </Link>
         </div>
+        
+        {/* Mobile: Unified menu */}
+        <div className={`nav__mobile-menu ${isMenuOpen ? 'active' : ''}`}>
+          <Link href="/work" className={`nav__link ${isActive('/work') ? 'nav__link--active' : ''}`} onClick={closeMenu}>Work</Link>
+          <Link href="/about" className={`nav__link ${isActive('/about') ? 'nav__link--active' : ''}`} onClick={closeMenu}>About</Link>
+          <Link href="/services" className={`nav__link ${isActive('/services') ? 'nav__link--active' : ''}`} onClick={closeMenu}>Services</Link>
+          <Link href="/give-him-50" className={`nav__link ${isActive('/give-him-50') ? 'nav__link--active' : ''}`} onClick={closeMenu}>Give Him 50</Link>
+          <Link href="/contact" className={`nav__link ${isActive('/contact') ? 'nav__link--active' : ''}`} onClick={closeMenu}>Contact</Link>
+        </div>
+        
         <button 
           className={`nav__hamburger ${isMenuOpen ? 'nav__hamburger--active' : ''}`}
           onClick={toggleMenu}
