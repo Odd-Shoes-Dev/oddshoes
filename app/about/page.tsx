@@ -109,34 +109,44 @@ export default function AboutPage() {
           </FadeUp>
           <FadeUp className="team-grid">
             <div className="team-member">
-              <div className="team-member__photo" style={{ background: 'var(--coral)', color: 'white' }}>OB</div>
-              <div className="team-member__name">Obed Bagyenyi</div>
+              <div className="team-member__photo">
+                <Image src="/images/Obed.jpg" alt="Obed Edom Mugisha" width={120} height={120} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </div>
+              <div className="team-member__name">Obed Edom Mugisha</div>
               <div className="team-member__divider"></div>
-              <div className="team-member__role">Founder & Lead</div>
+              <div className="team-member__role">Team Lead, Asst. Pastor, Lead Guitarist</div>
             </div>
             <div className="team-member">
-              <div className="team-member__photo" style={{ background: '#f5a623', color: 'white' }}>NE</div>
-              <div className="team-member__name">Nahabwe Edwin</div>
+              <div className="team-member__photo">
+                <Image src="/images/Edwin.jpg" alt="Edwin Nahabwe" width={120} height={120} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </div>
+              <div className="team-member__name">Edwin Nahabwe</div>
               <div className="team-member__divider"></div>
-              <div className="team-member__role">Full-Stack Dev</div>
+              <div className="team-member__role">Lead Guitarist, Youth Pastor, Full Stack Dev</div>
             </div>
             <div className="team-member">
-              <div className="team-member__photo" style={{ background: '#e05a3a', color: 'white' }}>DL</div>
-              <div className="team-member__name">Daniel L.</div>
+              <div className="team-member__photo">
+                <Image src="/images/Daniel.jpg" alt="Daniel Lunyelele" width={120} height={120} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </div>
+              <div className="team-member__name">Daniel Lunyelele</div>
               <div className="team-member__divider"></div>
-              <div className="team-member__role">Backend Engineer</div>
+              <div className="team-member__role">Artist, Back-end & Systems Engineer</div>
             </div>
             <div className="team-member">
-              <div className="team-member__photo" style={{ background: '#3a7bd5', color: 'white' }}>IA</div>
+              <div className="team-member__photo">
+                <Image src="/images/Ian.jpg" alt="Ian Abenaitwe" width={120} height={120} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </div>
               <div className="team-member__name">Ian Abenaitwe</div>
               <div className="team-member__divider"></div>
-              <div className="team-member__role">AI Engineer</div>
+              <div className="team-member__role">Saxophone Student, AI & Agentic AI, Basketball Enthusiast</div>
             </div>
             <div className="team-member">
-              <div className="team-member__photo" style={{ background: '#6b4c7a', color: 'white' }}>OJ</div>
+              <div className="team-member__photo">
+                <Image src="/images/Opaki.jpg" alt="Opakrwoth Jonathan" width={120} height={120} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </div>
               <div className="team-member__name">Opakrwoth Jonathan</div>
               <div className="team-member__divider"></div>
-              <div className="team-member__role">Graphics Designer</div>
+              <div className="team-member__role">Motion Graphics, Moving Ads, AI Content Creator</div>
             </div>
           </FadeUp>
         </div>
