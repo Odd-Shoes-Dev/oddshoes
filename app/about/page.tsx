@@ -38,8 +38,8 @@ export default function AboutPage() {
               <p style={{ marginBottom: '1.2rem' }}>We kept meeting brilliant Christian founders with incredible ideas — but they were stuck. They couldn't find developers who understood their vision. They couldn't afford the big agencies. They couldn't bridge the gap between their calling and a working product.</p>
               <p>So we built a studio specifically for them. A place where faith isn't a footnote — it's the foundation. Where every sprint starts with prayer and every product is built to serve.</p>
             </div>
-            <div className="two-col__img" style={{ background: 'linear-gradient(135deg,#e05a3a,#f0735a,#fcd4c9)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <span style={{ fontFamily: 'var(--serif)', fontSize: '4rem', color: 'white', opacity: '.3', fontStyle: 'italic' }}>OS</span>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Image src="/logo.svg" alt="Odd Shoes" width={400} height={400} style={{ width: '100%', maxWidth: '400px', height: 'auto' }} />
             </div>
           </FadeUp>
         </div>
