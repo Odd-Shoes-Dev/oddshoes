@@ -153,21 +153,14 @@
   /* Reset all items first */
   .hex:nth-child(n) {
     grid-column: auto !important;
+    left: auto !important;
   }
 
   /* Center the 3-item rows - items 5,6,7 then 12,13,14 then 19,20,21 */
   /* Start the first of each 3-item group at column 2 to center */
   .hex:nth-child(7n + 5) {
     grid-column-start: 2 !important;
-    left: -50%;
   }
-  .hex:nth-child(7n + 6) { 
-    left: -50%; 
-  }
-  .hex:nth-child(7n + 7) { 
-    left: -50%; 
-  }
-  
 }
 
 @media (max-width: 768px) {
@@ -191,16 +184,13 @@
   /* Reset all items */
   .hex:nth-child(n) {
     grid-column: auto !important;
+    left: auto !important;
   }
 
   /* Center the 2-item rows - items 4,5 then 9,10 then 14,15 */
   /* Start at column 2 (out of 3 columns) to center */
   .hex:nth-child(5n + 4) {
     grid-column-start: 2 !important;
-      left: -50%;
-  }
-  .hex:nth-child(5n + 5) {
-      left: -50%;
   }
 }
 
@@ -222,6 +212,7 @@
     margin-left: 0 !important;
     grid-column: auto !important;
     width: 100%;
+    left: auto !important;
   }
 
   /* Every 3rd item (3, 6, 9, 12...) spans both columns and centers */
@@ -229,8 +220,7 @@
     grid-column: span 2 !important;
     width: 145px;
     max-width: 145px;
-    margin-bottom: 0;
-    left: 72.5px;
+    margin: 0 auto;
     padding-bottom: 167.43px; /* Fixed height instead of percentage to maintain hexagon shape */
   }
 }
