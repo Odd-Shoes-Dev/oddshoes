@@ -228,13 +228,60 @@ export default function AboutPage() {
             <h2>Who we work with</h2>
           </FadeUp>
           <FadeUp className="partners-row">
-            <div className="partner-logo">AWS</div>
-            <div className="partner-logo">Vercel</div>
-            <div className="partner-logo">Stripe</div>
-            <div className="partner-logo">Figma</div>
-            <div className="partner-logo">Google<br />Cloud</div>
-            <div className="partner-logo">Notion</div>
-            <div className="partner-logo">Linear</div>
+            <a href="https://haiven.chat/" target="_blank" rel="noopener noreferrer" className="partner-logo-wrapper">
+              <div className="partner-logo" style={{ background: '#000000' }}>
+                <Image src="/images/haiven/logo.svg" alt="Haiven" width={120} height={40} style={{ objectFit: 'contain' }} />
+              </div>
+              <span className="partner-name">Haiven</span>
+            </a>
+            <a href="https://www.gravityjack.com/" target="_blank" rel="noopener noreferrer" className="partner-logo-wrapper">
+              <div className="partner-logo" style={{ background: '#000000' }}>
+                <Image src="/images/gravityjack/logo.webp" alt="GravityJack" width={120} height={40} style={{ objectFit: 'contain' }} />
+              </div>
+              <span className="partner-name">GravityJack</span>
+            </a>
+            <a href="https://www.diginvision.com/" target="_blank" rel="noopener noreferrer" className="partner-logo-wrapper">
+              <div className="partner-logo">
+                <Image src="/images/diginvision/logo.svg" alt="Dig In Vision" width={120} height={40} style={{ objectFit: 'contain' }} />
+              </div>
+              <span className="partner-name">Dig In Vision</span>
+            </a>
+            <a href="https://www.blueoxkampus.com/" target="_blank" rel="noopener noreferrer" className="partner-logo-wrapper">
+              <div className="partner-logo">
+                <Image src="/images/blueoxkampus/logo.png" alt="BlueOx Kampus" width={120} height={40} style={{ objectFit: 'contain' }} />
+              </div>
+              <span className="partner-name">BlueOx Kampus</span>
+            </a>
+            <a href="https://www.kingdombroker.com/" target="_blank" rel="noopener noreferrer" className="partner-logo-wrapper">
+              <div className="partner-logo">
+                <Image src="/images/kingdombroker/logo.png" alt="Kingdom Broker" width={120} height={40} style={{ objectFit: 'contain' }} />
+              </div>
+              <span className="partner-name">Kingdom Broker</span>
+            </a>
+            <a href="https://glpsoftware.pl/" target="_blank" rel="noopener noreferrer" className="partner-logo-wrapper">
+              <div className="partner-logo">
+                <Image src="/images/glp/logo.png" alt="GLP Software" width={120} height={40} style={{ objectFit: 'contain' }} />
+              </div>
+              <span className="partner-name">GLP Software</span>
+            </a>
+            <a href="https://corntech.pl/en/designing/" target="_blank" rel="noopener noreferrer" className="partner-logo-wrapper">
+              <div className="partner-logo" style={{ background: '#000000' }}>
+                <Image src="/images/corntech/logo.png" alt="CornTech" width={120} height={40} style={{ objectFit: 'contain' }} />
+              </div>
+              <span className="partner-name">CornTech</span>
+            </a>
+            <a href="http://www.zerke.pl/en/for-foreign-workers" target="_blank" rel="noopener noreferrer" className="partner-logo-wrapper">
+              <div className="partner-logo">
+                <Image src="/images/zerke/logo.png" alt="Zerke" width={120} height={40} style={{ objectFit: 'contain' }} />
+              </div>
+              <span className="partner-name">Zerke</span>
+            </a>
+            <a href="https://en.wsts.edu.pl/" target="_blank" rel="noopener noreferrer" className="partner-logo-wrapper">
+              <div className="partner-logo">
+                <Image src="/images/mats/logo.svg" alt="MATS" width={120} height={40} style={{ objectFit: 'contain' }} />
+              </div>
+              <span className="partner-name">MATS</span>
+            </a>
           </FadeUp>
         </div>
       </section>
