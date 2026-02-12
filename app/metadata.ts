@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const siteMetadata = {
-  title: 'Odd Shoes — A Christian Founders Startup Accelerator',
-  description: 'No tech co-founder? No $50k budget? We ship your MVP in 8 days for $5–15k. 100+ Christian founders launched. 50% funds missions.',
+  title: 'Odd Shoes: The Tech Partner for Christian Founders',
+  description: 'No tech co-founder? No $50k budget? We turn your vision into a live MVP in 5–14 days. 100+ shipped, 50% of profits fund missions. Ship your vision today.',
   url: 'https://oddshoes.co',
   siteName: 'Odd Shoes',
   locale: 'en_US',
