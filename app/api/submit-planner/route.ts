@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     // Send email to Odd Shoes team
     await resend.emails.send({
       from: 'Odd Shoes Planner <onboarding@resend.dev>',
-      to: 'blueoxrecruit@gmail.com',
+      to: 'buildit@oddshoes.dev',
       subject: `New Project Planner: ${data.name} - ${data.company || 'No Company'}`,
       html: `
         <!DOCTYPE html>
