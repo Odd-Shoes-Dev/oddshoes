@@ -1469,6 +1469,19 @@ p { font-size: 1.05rem; color: var(--gray-600); line-height: 1.8; }
 @media (max-width: 768px) {
   :root { --section-pad: 60px; --nav-h: 65px; }
   
+  /* Hero section - larger text on mobile */
+  .hero h1 {
+    margin-top: -30px;
+    padding-top: -15px;
+    font-size: clamp(3.2rem, 8vw, 5.5rem);
+  }
+  
+  .hero__subtitle {
+    padding-top: 5px;
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    margin-bottom: 3rem;
+  }
+  
   /* Hide desktop nav */
   .nav__links { display: none !important; }
   .nav__hamburger { display: flex; }
@@ -1553,6 +1566,15 @@ p { font-size: 1.05rem; color: var(--gray-600); line-height: 1.8; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
   .get-started-grid { grid-template-columns: 1fr; gap: 2rem; }
   .get-started-card { padding: 2.5rem 1.5rem; }
+  
+  /* Services section - reduce heading spacing */
+  .section--services-preview .section-header {
+    margin-bottom: 0.5rem;
+    margin-top: -10px;
+  }
+  .section--services-preview .section-header h2 {
+    margin-bottom: 1.5rem !important;
+  }
   
   /* Services Page */
   .services-identity__grid { grid-template-columns: 1fr; gap: 1.5rem; }

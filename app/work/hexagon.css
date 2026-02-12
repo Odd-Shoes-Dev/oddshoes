@@ -139,7 +139,7 @@
 @media (max-width: 1024px) {
   .hexagon-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px 25px;
+    gap: 5px 25px;
     max-width: 100%;
     margin: 0 auto;
   }
@@ -148,6 +148,26 @@
     margin-top: 0 !important;
     margin-left: 0 !important;
   }
+
+  /* Pattern: 4, 3 (centered), 4, 3... */
+  /* Reset all items first */
+  .hex:nth-child(n) {
+    grid-column: auto !important;
+  }
+
+  /* Center the 3-item rows - items 5,6,7 then 12,13,14 then 19,20,21 */
+  /* Start the first of each 3-item group at column 2 to center */
+  .hex:nth-child(7n + 5) {
+    grid-column-start: 2 !important;
+    left: -50%;
+  }
+  .hex:nth-child(7n + 6) { 
+    left: -50%; 
+  }
+  .hex:nth-child(7n + 7) { 
+    left: -50%; 
+  }
+  
 }
 
 @media (max-width: 768px) {
@@ -158,13 +178,29 @@
   
   .hexagon-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px 20px;
+    gap: 5px 20px;
     max-width: 100%;
   }
   
   .hex:nth-child(n + 4) {
     margin-top: 0 !important;
     margin-left: 0 !important;
+  }
+
+  /* Pattern: 3, 2 (centered), 3, 2... */
+  /* Reset all items */
+  .hex:nth-child(n) {
+    grid-column: auto !important;
+  }
+
+  /* Center the 2-item rows - items 4,5 then 9,10 then 14,15 */
+  /* Start at column 2 (out of 3 columns) to center */
+  .hex:nth-child(5n + 4) {
+    grid-column-start: 2 !important;
+      left: -50%;
+  }
+  .hex:nth-child(5n + 5) {
+      left: -50%;
   }
 }
 
@@ -175,15 +211,27 @@
   }
   
   .hexagon-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px 15px;
+    max-width: 320px;
+    margin: 0 auto;
   }
   
   .hex:nth-child(n) {
     margin-top: 0 !important;
     margin-left: 0 !important;
     grid-column: auto !important;
+    width: 100%;
+  }
+
+  /* Every 3rd item (3, 6, 9, 12...) spans both columns and centers */
+  .hex:nth-child(3n) {
+    grid-column: span 2 !important;
+    width: 145px;
+    max-width: 145px;
+    margin-bottom: 0;
+    left: 72.5px;
+    padding-bottom: 167.43px; /* Fixed height instead of percentage to maintain hexagon shape */
   }
 }
 
