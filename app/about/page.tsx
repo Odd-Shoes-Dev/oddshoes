@@ -29,18 +29,7 @@ export default function AboutPage() {
           <FadeUp style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <p className="label label--coral">Who We Are</p>
             <p style={{ fontSize: '1.1rem', fontWeight: '500', color: 'var(--coral)' }}>The complete technical team Kingdom builders don't have.</p>
-            <a href="https://www.fundacjagigi.pl/" target="_blank" rel="noopener noreferrer" className="partner-logo-wrapper">
-              <div className="partner-logo partner-logo--dark">
-                <Image src="/images/gigifoundation/logo.png" alt="GIGI Foundation" width={140} height={40} style={{ objectFit: 'contain' }} />
-              </div>
-              <span className="partner-name">GIGI Foundation</span>
-            </a>
-            <a href="https://gigiglobal.com/" target="_blank" rel="noopener noreferrer" className="partner-logo-wrapper">
-              <div className="partner-logo partner-logo--dark">
-                <Image src="/images/gigiglobal/logo.png" alt="GIGI Global" width={140} height={40} style={{ objectFit: 'contain' }} />
-              </div>
-              <span className="partner-name">GIGI Global</span>
-            </a>
+            
           </FadeUp>
           <FadeUp className="two-col">
             <div>
