@@ -1526,11 +1526,57 @@ p { font-size: 1.05rem; color: var(--gray-600); line-height: 1.8; }
 
 /* Billy Pods styles */
 .pod-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
-.pod-feature { background: white; padding: 1rem; border-radius: 12px; border: 1px solid var(--gray-100); display: flex; gap: .75rem; align-items: flex-start; }
-.pod-feature h4 { margin-bottom: .25rem; }
+.pod-feature {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--gray-100);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition);
+}
+.pod-feature::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 0;
+  background: var(--coral);
+  z-index: 0;
+  transition: height .45s cubic-bezier(.4,0,.2,1);
+}
+.pod-feature:hover::before { height: 100%; }
+.pod-feature > * { position: relative; z-index: 1; }
+.pod-feature img { display: block; margin: 0 0 .25rem 0; }
+.pod-feature h4 { margin: 0; color: var(--coral); transition: color var(--transition); font-weight: 700; }
+.pod-feature:hover h4 { color: var(--white); }
+.pod-feature p { margin: 0; color: var(--gray-700); transition: color var(--transition); }
+.pod-feature:hover p { color: rgba(255,255,255,.9); }
 .pod-example__card { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; background: var(--gray-50); padding: 1rem; border-radius: 8px; }
 .tracks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem; }
-.track-card { background: white; border-radius: 8px; padding: 1rem; border: 1px solid var(--gray-100); }
+.track-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.25rem 1rem;
+  border: 1px solid var(--gray-200);
+  transition: all var(--transition);
+}
+.track-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  border-color: var(--coral);
+}
+.track-card h4 {
+  color: var(--coral);
+  margin-top: 0.15rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.track-card p { color: var(--gray-700); }
 .track-card .muted { color: var(--gray-500); font-size: .9rem; }
 
 

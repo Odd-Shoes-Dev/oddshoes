@@ -55,8 +55,8 @@ export default function PodRequestForm() {
   return (
     <form className="planner-form" onSubmit={handleSubmit} style={{ maxWidth: 820 }}>
       <div className="planner-section">
-        <h3 className="planner-section__title">Request Your Pod Profiles</h3>
-        <p className="planner-section__lead">Tell us the essentials and we’ll send 3–5 matched intern profiles within a few business days.</p>
+        <h3 className="planner-section__title">Ready to Clear Your Backlog?</h3>
+        <p className="planner-section__lead">Request your Pod profiles today. No recruiting funnel — just vetted builders and a simple start plan.</p>
         <div className="planner-grid">
           <div className="form-group">
             <label htmlFor="name">Full name *</label>

@@ -22,7 +22,6 @@ export default function BillyPodsPage() {
         <div className="container">
           <FadeUp className="section-header">
             <p className="label">Meet the Intern Pod</p>
-            <h2>This isn’t “remote interns.” It’s a Pod.</h2>
           </FadeUp>
 
           <div className="pod-features" style={{ marginTop: '1.5rem' }}>
@@ -48,24 +47,7 @@ export default function BillyPodsPage() {
             </div>
           </div>
 
-          <div className="pod-example" style={{ marginTop: '2rem' }}>
-            <h3>Example Managed Pod: React-Dev-04 (Active)</h3>
-            <div className="pod-example__card">
-              <div>
-                <strong>Sarah Mukisa</strong> — Pod Coordinator
-                <div>Standups · Reports · Blocker handling</div>
-              </div>
-              <div>
-                <strong>Joel Natukunda</strong> — React Intern
-                <div>Shipping components & UI fixes</div>
-              </div>
-              <div className="pod-report">
-                <h4>Weekly Pod Report · Week 4</h4>
-                <div>Tasks Shipped: <strong>12 / 14</strong></div>
-                <div>Blocked: 1 (API Keys)</div>
-              </div>
-            </div>
-          </div>
+          
 
           <div style={{ marginTop: '2rem' }}>
             <h3>Choose Your Track</h3>
@@ -98,11 +80,6 @@ export default function BillyPodsPage() {
           </div>
 
           <div style={{ marginTop: '2.5rem' }}>
-            <FadeUp>
-              <h3>Ready to Clear Your Backlog?</h3>
-              <p>Request your Pod profiles today. No recruiting funnel. Just vetted builders ready to ship.</p>
-            </FadeUp>
-
             <div style={{ marginTop: '1.25rem' }}>
               <PodRequestForm />
             </div>
