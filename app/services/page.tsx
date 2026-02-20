@@ -61,6 +61,14 @@ export default function ServicesPage() {
               <p>Custom AI agents & automation</p>
               <p>Built from worship, not just work</p>
             </div>
+            <div className="services-identity__card">
+              <div className="services-identity__card-icon">
+                <Image src="/icons/package.svg" alt="" width={64} height={64} />
+              </div>
+              <h3>Billy Pods</h3>
+              <p>Vetted intern Pods: 1–3 interns + coordinator to help your team ship.</p>
+              <p><a href="/services/billy-pods" className="btn btn--outline">Request a Pod →</a></p>
+            </div>
           </div>
         </div>
       </section>

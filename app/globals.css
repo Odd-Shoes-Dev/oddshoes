@@ -1524,6 +1524,16 @@ p { font-size: 1.05rem; color: var(--gray-600); line-height: 1.8; }
 }
 .sr-only { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; }
 
+/* Billy Pods styles */
+.pod-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+.pod-feature { background: white; padding: 1rem; border-radius: 12px; border: 1px solid var(--gray-100); display: flex; gap: .75rem; align-items: flex-start; }
+.pod-feature h4 { margin-bottom: .25rem; }
+.pod-example__card { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; background: var(--gray-50); padding: 1rem; border-radius: 8px; }
+.tracks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.track-card { background: white; border-radius: 8px; padding: 1rem; border: 1px solid var(--gray-100); }
+.track-card .muted { color: var(--gray-500); font-size: .9rem; }
+
+
 /* ─── FUN STATS ─── */
 .fun-stats {
   display: grid;
