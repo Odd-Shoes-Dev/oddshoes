@@ -6,7 +6,7 @@ A professional Next.js website for Odd Shoes, a Christian startup studio buildin
 
 - **Next.js 14** with App Router
 - **TypeScript** for type safety
-- **React 18** for UI components
+- **React 18** for UI components 
 - **Framer Motion** for smooth animations
 - **Custom CSS** with CSS Variables (keeping original branding)
 
