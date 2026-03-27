@@ -98,6 +98,9 @@ export default function PlannerPage() {
                     onChange={handleChange}
                     placeholder="e.g. David Kimani" 
                     required 
+                    maxLength={30}
+                    pattern="[a-zA-Z\s]+"
+                    title="Name must contain only letters and spaces, max 30 characters"
                   />
                 </div>
                 <div className="form-group">
