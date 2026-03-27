@@ -135,6 +135,9 @@ export default function PlannerPage() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+256 xxx xxx xxx" 
+                    pattern="^\+?[0-9\s\-\(\)]{7,20}$"
+                    title="Please enter a valid phone number (e.g., +256 700 000 000)"
+                    maxLength={20}
                   />
                 </div>
               </div>
