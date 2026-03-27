@@ -35,8 +35,8 @@ export default function Footer() {
         <div className="footer__bottom">
           <p>© {new Date().getFullYear()} Odd Shoes. All rights reserved.</p>
           <div className="footer__socials">
-            <a href="#" aria-label="Twitter">𝕏</a>
-            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="https://x.com/oddshoesdev?s=21" aria-label="X/Twitter">𝕏</a>
+            <a href="https://www.linkedin.com/company/odd-shoes-dev/" aria-label="LinkedIn">in</a>
             <a href="#" aria-label="Instagram">IG</a>
           </div>
         </div>
