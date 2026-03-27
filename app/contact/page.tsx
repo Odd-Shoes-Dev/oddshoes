@@ -118,7 +118,7 @@ export default function ContactPage() {
 
               <div className="contact-detail">
                 <p className="label">Office</p>
-                <a href="#">Innovation Village, Ntinda<br />Kampala, Uganda</a>
+                <a href="#">Plot 2190, Block 3 Ishanyu<br />Mbarara/Ibanda Road</a>
               </div>
 
               <div className="contact-detail">
@@ -245,8 +245,8 @@ export default function ContactPage() {
             <div style={{ marginBottom: '.5rem', display: 'flex', justifyContent: 'center' }}>
               <Image src="/icons/location.svg" alt="" width={56} height={56} />
             </div>
-            <div style={{ fontFamily: 'var(--serif)', fontSize: '1.2rem', color: 'var(--black)', marginBottom: '.5rem' }}>Kampala, Uganda</div>
-            <p style={{ fontSize: '.9rem', color: 'var(--gray-600)' }}>Innovation Village, Ntinda</p>
+            <div style={{ fontFamily: 'var(--serif)', fontSize: '1.2rem', color: 'var(--black)', marginBottom: '.5rem' }}>Plot 2190, Block 3 Ishanyu</div>
+            <p style={{ fontSize: '.9rem', color: 'var(--gray-600)' }}>Mbarara/Ibanda Road</p>
           </div>
         </FadeUp>
       </section>
