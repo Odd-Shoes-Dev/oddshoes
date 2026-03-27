@@ -215,7 +215,7 @@ export default function AboutPage() {
             </div>
             <div className="timeline__item">
               <div className="timeline__year">2026</div>
-              <div className="timeline__text">The year of scale. New office in Kampala. Launching our first accelerator cohort. God is faithful.</div>
+              <div className="timeline__text">The year of scale. New office in Mbarara. Launching our first accelerator cohort. God is faithful.</div>
             </div>
           </FadeUp>
         </div>

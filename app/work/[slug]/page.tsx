@@ -198,6 +198,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       )}
 
       {/* Testimonial (if available) */}
+      {/* COMMENTED OUT
       {project.testimonial && (
         <section className="section">
           <div className="container">
@@ -209,6 +210,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
       )}
+      */}
 
       {/* CTA Section */}
       <section className="cta-band">

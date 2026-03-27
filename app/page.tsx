@@ -212,7 +212,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ TESTIMONIAL ═══ */}
+      {/* ═══ TESTIMONIAL ═══ **/}
+      {/* COMMENTED OUT
       <section className="section">
         <div className="container">
           <FadeUp className="testimonial">
@@ -224,6 +225,7 @@ export default function Home() {
           </FadeUp>
         </div>
       </section>
+      */}
 
       {/* ═══ SCRIPTURE ═══ */}
       <section className="scripture">
