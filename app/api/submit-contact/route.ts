@@ -3,6 +3,19 @@ import { NextResponse } from 'next/server';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Helper function to escape HTML characters
+const escapeHtml = (text: string) => {
+  if (!text) return '';
+  const map: { [key: string]: string } = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;'
+  };
+  return String(text).replace(/[&<>"']/g, m => map[m]);
+};
+
 export async function POST(request: Request) {
   try {
     const data = await request.json();
@@ -11,7 +24,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: 'Odd Shoes Contact <onboarding@resend.dev>',
       to: 'buildit@oddshoes.dev',
-      subject: `New Contact: ${data.name}`,
+      subject: `New Contact: ${escapeHtml(data.name)}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -37,38 +50,38 @@ export async function POST(request: Request) {
             <div class="content">
               <div class="field">
                 <div class="label">Name</div>
-                <div class="value">${data.name}</div>
+                <div class="value">${escapeHtml(data.name)}</div>
               </div>
               
               <div class="field">
                 <div class="label">Email</div>
-                <div class="value"><a href="mailto:${data.email}">${data.email}</a></div>
+                <div class="value"><a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a></div>
               </div>
               
               ${data.service ? `
               <div class="field">
                 <div class="label">Service Interested In</div>
-                <div class="value">${data.service}</div>
+                <div class="value">${escapeHtml(data.service)}</div>
               </div>
               ` : ''}
               
               ${data.budget ? `
               <div class="field">
                 <div class="label">Budget</div>
-                <div class="value">${data.budget}</div>
+                <div class="value">${escapeHtml(data.budget)}</div>
               </div>
               ` : ''}
               
               ${data.referral ? `
               <div class="field">
                 <div class="label">How They Found Us</div>
-                <div class="value">${data.referral}</div>
+                <div class="value">${escapeHtml(data.referral)}</div>
               </div>
               ` : ''}
               
               <div class="field">
                 <div class="label">Message</div>
-                <div class="message-box">${data.message.replace(/\n/g, '<br>')}</div>
+                <div class="message-box">${escapeHtml(data.message).replace(/\n/g, '<br>')}</div>
               </div>
             </div>
             <div class="footer">

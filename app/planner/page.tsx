@@ -37,6 +37,11 @@ export default function PlannerPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    if (formData.services.length === 0) {
+      alert('Please select at least one service you need.');
+      return;
+    }
+    
     try {
       const response = await fetch('/api/submit-planner', {
         method: 'POST',
@@ -113,6 +118,7 @@ export default function PlannerPage() {
                     onChange={handleChange}
                     placeholder="david@example.com" 
                     required 
+                    maxLength={100}
                   />
                 </div>
                 <div className="form-group">
@@ -179,7 +185,11 @@ export default function PlannerPage() {
                   placeholder="What problem are you solving? Who is it for? What makes it different? How does it serve the Kingdom?" 
                   rows={6}
                   required
+                  maxLength={1000}
                 ></textarea>
+                <div style={{ fontSize: '0.8rem', color: 'var(--gray-500)', marginTop: '0.5rem', textAlign: 'right' }}>
+                  {formData.description.length}/1000
+                </div>
               </div>
             </FadeUp>
 

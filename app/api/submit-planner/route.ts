@@ -3,6 +3,19 @@ import { NextResponse } from 'next/server';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Helper function to escape HTML characters
+const escapeHtml = (text: string) => {
+  if (!text) return '';
+  const map: { [key: string]: string } = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;'
+  };
+  return String(text).replace(/[&<>"']/g, m => map[m]);
+};
+
 export async function POST(request: Request) {
   try {
     const data = await request.json();
@@ -11,7 +24,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: 'Odd Shoes Planner <onboarding@resend.dev>',
       to: 'buildit@oddshoes.dev',
-      subject: `New Project Planner: ${data.name} - ${data.company || 'No Company'}`,
+      subject: `New Project Planner: ${escapeHtml(data.name)} - ${data.company ? escapeHtml(data.company) : 'No Company'}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -38,43 +51,43 @@ export async function POST(request: Request) {
             <div class="content">
               <div class="field">
                 <div class="label">Contact Person</div>
-                <div class="value">${data.name}</div>
+                <div class="value">${escapeHtml(data.name)}</div>
               </div>
               
               <div class="field">
                 <div class="label">Email</div>
-                <div class="value"><a href="mailto:${data.email}">${data.email}</a></div>
+                <div class="value"><a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a></div>
               </div>
               
               ${data.company ? `
               <div class="field">
                 <div class="label">Company</div>
-                <div class="value">${data.company}</div>
+                <div class="value">${escapeHtml(data.company)}</div>
               </div>
               ` : ''}
               
               ${data.phone ? `
               <div class="field">
                 <div class="label">Phone</div>
-                <div class="value"><a href="tel:${data.phone}">${data.phone}</a></div>
+                <div class="value"><a href="tel:${escapeHtml(data.phone)}">${escapeHtml(data.phone)}</a></div>
               </div>
               ` : ''}
               
               <div class="field">
                 <div class="label">Project Type</div>
-                <div class="value">${data.projectType || 'Not specified'}</div>
+                <div class="value">${data.projectType ? escapeHtml(data.projectType) : 'Not specified'}</div>
               </div>
               
               <div class="field">
                 <div class="label">Budget</div>
-                <div class="value">${data.budget || 'Not specified'}</div>
+                <div class="value">${data.budget ? escapeHtml(data.budget) : 'Not specified'}</div>
               </div>
               
               ${data.services && data.services.length > 0 ? `
               <div class="field">
                 <div class="label">Services Requested</div>
                 <div class="services">
-                  ${data.services.map((service: string) => `<span class="service-tag">${service}</span>`).join('')}
+                  ${data.services.map((service: string) => `<span class="service-tag">${escapeHtml(service)}</span>`).join('')}
                 </div>
               </div>
               ` : ''}
@@ -82,28 +95,28 @@ export async function POST(request: Request) {
               ${data.description ? `
               <div class="field">
                 <div class="label">Project Description</div>
-                <div class="value">${data.description.replace(/\n/g, '<br>')}</div>
+                <div class="value">${escapeHtml(data.description).replace(/\n/g, '<br>')}</div>
               </div>
               ` : ''}
               
               ${data.startMonth && data.startYear ? `
               <div class="field">
                 <div class="label">Preferred Start Date</div>
-                <div class="value">${data.startMonth} ${data.startYear}</div>
+                <div class="value">${escapeHtml(data.startMonth)} ${escapeHtml(data.startYear)}</div>
               </div>
               ` : ''}
               
               ${data.launchMonth && data.launchYear ? `
               <div class="field">
                 <div class="label">Target Launch Date</div>
-                <div class="value">${data.launchMonth} ${data.launchYear}</div>
+                <div class="value">${escapeHtml(data.launchMonth)} ${escapeHtml(data.launchYear)}</div>
               </div>
               ` : ''}
               
               ${data.hearAbout ? `
               <div class="field">
                 <div class="label">How They Found Us</div>
-                <div class="value">${data.hearAbout}</div>
+                <div class="value">${escapeHtml(data.hearAbout)}</div>
               </div>
               ` : ''}
             </div>
