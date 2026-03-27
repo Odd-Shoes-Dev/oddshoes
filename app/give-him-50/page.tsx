@@ -155,6 +155,7 @@ export default function GiveHim50Page() {
       </section>
 
       {/* ═══ TESTIMONIAL ═══ */}
+      {/* COMMENTED OUT
       <section className="section">
         <div className="container">
           <FadeUp className="testimonial">
@@ -166,6 +167,7 @@ export default function GiveHim50Page() {
           </FadeUp>
         </div>
       </section>
+      */}
 
       {/* ═══ SCRIPTURE ═══ */}
       <section className="scripture">
