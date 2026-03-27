@@ -42,7 +42,7 @@ export default function ServicesPage() {
                 <Image src="/icons/team.svg" alt="" width={64} height={64} />
               </div>
               <h3>Who We Are</h3>
-              <p>Worshippers, musicians, and pastors blessed by God to be engineers, based in Kampala, Uganda.</p>
+              <p>Worshippers, musicians, and pastors blessed by God to be engineers, based in Mbarara, Uganda.</p>
             </div>
             <div className="services-identity__card">
               <div className="services-identity__card-icon">

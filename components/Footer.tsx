@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="footer__col-title">Contact</div>
             <a href="mailto:buildit@oddshoes.dev">buildit@oddshoes.dev</a>
             <a href="https://wa.me/3197010209759">+31 97 010 209 759</a>
-            <p style={{ marginTop: '1rem', fontSize: '.85rem' }}>Kampala, Uganda</p>
+            <p style={{ marginTop: '1rem', fontSize: '.85rem' }}>Mbarara, Uganda</p>
           </div>
         </div>
         <div className="footer__bottom">

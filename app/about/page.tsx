@@ -106,7 +106,7 @@ export default function AboutPage() {
           <FadeUp className="section-header">
             <p className="label">The Players</p>
             <h2>Meet the team</h2>
-            <p>A small but mighty crew of designers, developers, and dreamers based in Kampala.</p>
+            <p>A small but mighty crew of designers, developers, and dreamers based in Mbarara.</p>
           </FadeUp>
           <FadeUp className="team-grid">
             <div className="team-member">
