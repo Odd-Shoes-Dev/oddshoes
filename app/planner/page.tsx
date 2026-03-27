@@ -131,8 +131,8 @@ export default function PlannerPage() {
                     onChange={handleChange}
                     placeholder="e.g. NextGen EdTech" 
                     maxLength={50}
-                    pattern="[a-zA-Z0-9\s\-\&]+"
-                    title="Company name should contain only letters, numbers, spaces, hyphens, and ampersands, max 50 characters"
+                    pattern="[a-zA-Z0-9\s\-\&\.\'\,\/\(\)]+"
+                    title="Company name should contain only letters, numbers, spaces, hyphens, ampersands, periods, apostrophes, commas, slashes, and parentheses, max 50 characters"
                   />
                 </div>
                 <div className="form-group">
