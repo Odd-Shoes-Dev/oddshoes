@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import FadeUp from '@/components/FadeUp';
-import { projects } from './work/projectsData';
-import './work/hexagon.css';
+import FeaturedWork from '@/components/FeaturedWork';
 
 export default function Home() {
   return (
@@ -77,62 +76,8 @@ export default function Home() {
             <h2>What we've been building</h2>
             <p>A selection of startups we've helped bring to life — from napkin sketch to launched product.</p>
           </FadeUp>
-          
-          {/* Hexagonal Grid - First 9 projects (2 rows) */}
-          <div className="hex-grid-wrapper">
-            <ul className="hexagon-grid">
-              {projects.slice(0, 9).map((project, index) => {
-                // Determine hex class based on position for offset pattern
-                let hexClass = 'hex';
-                if (index % 10 >= 5) hexClass += ' secondary';
-                
-                // Larger logos for specific projects
-                let logoSize = '60%';
-                if (project.slug === 'nextgenhims') logoSize = '95%';
-                else if (['davinci-analytics', 'lightbeam-media'].includes(project.slug)) logoSize = '80%';
-                else if (['picflair', 'headshotcam'].includes(project.slug)) logoSize = '70%';
-                
-                return (
-                  <li key={project.id} className={hexClass}>
-                    <div className="hex-in">
-                      <Link 
-                        href={`/work/${project.slug}`} 
-                        className={`hex-link ${project.logoText ? 'hex-text-logo' : ''}`}
-                        style={{ 
-                          backgroundImage: project.logoText ? 'none' : `url(${project.logoPath})`,
-                          backgroundColor: project.logoBackgroundColor || '#ffffff',
-                          backgroundSize: project.logoText ? 'auto' : logoSize
-                        }}
-                      >
-                        {project.logoText && (
-                          <span className="hex-logo-text">
-                            {project.slug === 'glosacco' ? (
-                              <>Glo <span style={{ color: '#4ade80' }}>SACCO</span></>
-                            ) : project.slug === 'instantugc' ? (
-                              <>Instant<span style={{ fontWeight: '700' }}>UGC</span></>
-                            ) : project.slug === 'devfest-qa' ? (
-                              <div style={{ display: 'flex', gap: '8px', alignItems: 'center', justifyContent: 'center', height: '60px' }}>
-                                <div style={{ width: '12px', height: '100%', backgroundColor: '#3b82f6', borderRadius: '20px' }}></div>
-                                <div style={{ width: '12px', height: '100%', backgroundColor: '#22c55e', borderRadius: '20px' }}></div>
-                                <div style={{ width: '12px', height: '100%', backgroundColor: '#eab308', borderRadius: '20px' }}></div>
-                                <div style={{ width: '12px', height: '100%', backgroundColor: '#ef4444', borderRadius: '20px' }}></div>
-                              </div>
-                            ) : (
-                              project.logoText
-                            )}
-                          </span>
-                        )}
-                      </Link>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
 
-          <FadeUp style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <Link href="/work" className="btn btn--outline btn--small">View All Projects →</Link>
-          </FadeUp>
+          <FeaturedWork />
         </div>
       </section>
 
