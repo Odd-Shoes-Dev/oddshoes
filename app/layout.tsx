@@ -11,6 +11,30 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Odd Shoes',
+    url: 'https://oddshoes.co',
+    logo: 'https://oddshoes.co/logo.svg',
+    description: 'A startup studio building tech products for Christian founders who believe business can be a vehicle for Kingdom impact.',
+    sameAs: [
+      'https://twitter.com/oddshoes',
+      'https://www.linkedin.com/company/oddshoes',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'Business',
+      email: 'hello@oddshoes.co',
+      url: 'https://oddshoes.co/contact',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'UG',
+      addressLocality: 'Mbarara',
+    },
+  };
+
   return (
     <html lang="en">
       <head>
@@ -22,6 +46,10 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Odd Shoes" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </head>
       <body>
         <Navigation />

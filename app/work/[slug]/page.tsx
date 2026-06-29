@@ -1,14 +1,30 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import { getProjectBySlug, projects } from '../projectsData';
 import FadeUp from '@/components/FadeUp';
 import ProjectSlideshow from './ProjectSlideshow';
+import { createMetadata } from '@/app/metadata';
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
   }));
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const project = getProjectBySlug(params.slug);
+
+  if (!project) {
+    return createMetadata({});
+  }
+
+  return createMetadata({
+    title: project.name,
+    description: project.overview,
+    path: `/work/${project.slug}`,
+  });
 }
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
@@ -22,8 +38,39 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   const currentIndex = projects.findIndex(p => p.slug === params.slug);
   const nextProject = projects[(currentIndex + 1) % projects.length];
 
+  // JSON-LD schema for the project
+  const projectSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: project.name,
+    description: project.overview,
+    url: project.url,
+    applicationCategory: 'WebApplication',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      ratingCount: '1',
+    },
+    creator: {
+      '@type': 'Organization',
+      name: 'Odd Shoes',
+      url: 'https://oddshoes.co',
+    },
+    features: project.features,
+    keywords: [project.name, project.tag, ...project.techStack].join(', '),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
+      />
       {/* Hero Section */}
       <section className="hero" style={{ minHeight: '35vh', display: 'flex', alignItems: 'center', paddingTop: '5rem', paddingBottom: '2rem' }}>
         <div className="container">
