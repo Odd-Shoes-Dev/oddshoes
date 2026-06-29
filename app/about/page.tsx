@@ -116,6 +116,7 @@ export default function AboutPage() {
               <div className="team-member__name">Obed Edom Mugisha</div>
               <div className="team-member__divider"></div>
               <div className="team-member__role">Team Lead, Asst. Pastor, Lead Guitarist</div>
+              <div className="team-member__desc">Leads the team by day, leads worship by night, and somehow finds time to preach on Sundays. Runs on coffee and conviction.</div>
             </div>
             <div className="team-member">
               <div className="team-member__photo">
@@ -123,7 +124,8 @@ export default function AboutPage() {
               </div>
               <div className="team-member__name">Edwin Nahabwe</div>
               <div className="team-member__divider"></div>
-              <div className="team-member__role">Lead Guitarist, Youth Pastor, Full Stack Dev</div>
+              <div className="team-member__role">Full Stack Dev, Lead Guitarist, Youth Pastor</div>
+              <div className="team-member__desc">Writes full-stack code between youth sermons and guitar solos. Has debugged production at 2 AM and delivered a sermon at 9 AM the same day, without missing a beat.</div>
             </div>
             <div className="team-member">
               <div className="team-member__photo">
@@ -132,22 +134,21 @@ export default function AboutPage() {
               <div className="team-member__name">Daniel Lunyelele</div>
               <div className="team-member__divider"></div>
               <div className="team-member__role">Artist, Back-end & Systems Engineer</div>
+              <div className="team-member__desc">Paints canvases for fun and architects databases for a living. The only person who can explain both color theory and database normalization in the same conversation.</div>
             </div>
             <div className="team-member">
-              <div className="team-member__photo">
-                <Image src="/images/Ian.jpg" alt="Ian Abenaitwe" width={120} height={120} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </div>
-              <div className="team-member__name">Ian Abenaitwe</div>
+              <div className="team-member__photo team-member__initials">SS</div>
+              <div className="team-member__name">Shadrack Ssenkaayi</div>
               <div className="team-member__divider"></div>
-              <div className="team-member__role">Saxophone Student, AI & Agentic AI, Basketball Enthusiast</div>
+              <div className="team-member__role">AI & Full-Stack Engineer</div>
+              <div className="team-member__desc">Builds intelligent web apps before breakfast and deploys cloud infrastructure before lunch. If it can be automated, he's already written the script and if it can't, he's training an AI to figure it out.</div>
             </div>
             <div className="team-member">
-              <div className="team-member__photo">
-                <Image src="/images/Opaki.jpg" alt="Opakrwoth Jonathan" width={120} height={120} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </div>
-              <div className="team-member__name">Opakrwoth Jonathan</div>
+              <div className="team-member__photo team-member__initials">JN</div>
+              <div className="team-member__name">Judith Nyangoma</div>
               <div className="team-member__divider"></div>
-              <div className="team-member__role">Motion Graphics, Moving Ads, AI Content Creator</div>
+              <div className="team-member__role">Creative Media Designer & Chef</div>
+              <div className="team-member__desc">Prepares exceptional culinary plates while also creating graphic designs, photography, videos, and digital content that showcase the team's work and brand. Yes, she can plate a five-star dish and a five-star poster in the same afternoon.</div>
             </div>
           </FadeUp>
         </div>
