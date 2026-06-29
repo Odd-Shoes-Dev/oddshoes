@@ -121,7 +121,7 @@ export async function POST(request: Request) {
               ` : ''}
             </div>
             <div class="footer">
-              <p>Submitted from oddshoes.co/planner</p>
+              <p>Submitted from oddshoes.dev/planner</p>
               <p style="margin-top: 10px;">Respond within 24 hours ✝️</p>
             </div>
           </div>

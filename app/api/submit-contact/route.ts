@@ -85,7 +85,7 @@ export async function POST(request: Request) {
               </div>
             </div>
             <div class="footer">
-              <p>Submitted from oddshoes.co/contact</p>
+              <p>Submitted from oddshoes.dev/contact</p>
               <p style="margin-top: 10px;">Respond within 24 hours ✝️</p>
             </div>
           </div>

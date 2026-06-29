@@ -50,7 +50,7 @@
 
         <div class="contact-detail">
           <p class="label">Email</p>
-          <a href="mailto:hello@oddshoes.co">hello@oddshoes.co</a>
+          <a href="mailto:hello@oddshoes.dev">hello@oddshoes.dev</a>
         </div>
 
         <div class="contact-detail">
@@ -305,7 +305,7 @@
       </div>
       <div class="footer__col">
         <div class="footer__col-title">Connect</div>
-        <a href="#">hello@oddshoes.co</a>
+        <a href="#">hello@oddshoes.dev</a>
         <a href="#">WhatsApp</a>
         <a href="https://x.com/oddshoesdev?s=21">Twitter / X</a>
         <a href="#">LinkedIn</a>

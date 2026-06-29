@@ -31,7 +31,7 @@ RESEND_API_KEY=re_YourActualKeyFromStep2
 **Option B: Use Your Own Domain (Professional)**
 1. Go to [Domains](https://resend.com/domains) in Resend
 2. Click **Add Domain**
-3. Enter: `oddshoes.co`
+3. Enter: `oddshoes.dev`
 4. Add DNS records to your domain registrar:
    - SPF record
    - DKIM record  
@@ -39,8 +39,8 @@ RESEND_API_KEY=re_YourActualKeyFromStep2
 5. Verify domain (may take 24 hours)
 
 Once verified, update the API routes:
-- Change `planner@oddshoes.co` → your verified domain
-- Change `contact@oddshoes.co` → your verified domain
+- Change `planner@oddshoes.dev` → your verified domain
+- Change `contact@oddshoes.dev` → your verified domain
 
 ### 5. Restart Development Server
 ```bash

@@ -59,7 +59,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     creator: {
       '@type': 'Organization',
       name: 'Odd Shoes',
-      url: 'https://oddshoes.co',
+      url: 'https://oddshoes.dev',
     },
     features: project.features,
     keywords: [project.name, project.tag, ...project.techStack].join(', '),

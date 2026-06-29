@@ -15,8 +15,8 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Odd Shoes',
-    url: 'https://oddshoes.co',
-    logo: 'https://oddshoes.co/logo.svg',
+    url: 'https://oddshoes.dev',
+    logo: 'https://oddshoes.dev/logo.svg',
     description: 'A startup studio building tech products for Christian founders who believe business can be a vehicle for Kingdom impact.',
     sameAs: [
       'https://twitter.com/oddshoes',
@@ -25,8 +25,8 @@ export default function RootLayout({
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Business',
-      email: 'hello@oddshoes.co',
-      url: 'https://oddshoes.co/contact',
+      email: 'hello@oddshoes.dev',
+      url: 'https://oddshoes.dev/contact',
     },
     address: {
       '@type': 'PostalAddress',
