@@ -2,10 +2,22 @@ import Image from 'next/image';
 import FadeUp from '@/components/FadeUp';
 import PodRequestForm from '@/components/PodRequestForm';
 
-export const metadata = {
-  title: 'Billy Pods — Odd Shoes',
-  description: 'Intern Pods (1–3 vetted interns + coordinator) to help startups ship without hiring.'
-};
+import { Metadata } from 'next';
+import { createMetadata } from '@/app/metadata';
+
+export const metadata: Metadata = createMetadata({
+  title: 'Billy Pods — Hire Intern Dev Teams for Your Startup',
+  description: 'Hire a Billy Pod: 1–3 vetted interns plus a coordinator to help your startup ship features without full-time hiring. Affordable dev teams from Odd Shoes, Uganda.',
+  path: '/services/billy-pods',
+  keywords: [
+    'hire intern developers',
+    'startup dev team',
+    'affordable developers Uganda',
+    'outsource development Africa',
+    'intern pod team',
+    'remote dev team hire',
+  ],
+});
 
 export default function BillyPodsPage() {
   return (

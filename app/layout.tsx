@@ -17,7 +17,9 @@ export default function RootLayout({
     name: 'Odd Shoes',
     url: 'https://oddshoes.dev',
     logo: 'https://oddshoes.dev/logo.svg',
-    description: 'A startup studio building tech products for Christian founders who believe business can be a vehicle for Kingdom impact.',
+    description: 'The startup studio for faith-driven founders and investors worldwide. We build MVPs, SaaS platforms, and mobile apps — 50% of profits fund Kingdom work.',
+    areaServed: 'Worldwide',
+    knowsLanguage: 'en',
     sameAs: [
       'https://twitter.com/oddshoes',
       'https://www.linkedin.com/company/oddshoes',
@@ -27,6 +29,7 @@ export default function RootLayout({
       contactType: 'Business',
       email: 'hello@oddshoes.dev',
       url: 'https://oddshoes.dev/contact',
+      availableLanguage: 'English',
     },
     address: {
       '@type': 'PostalAddress',

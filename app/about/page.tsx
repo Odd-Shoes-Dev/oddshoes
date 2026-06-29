@@ -6,9 +6,17 @@ import { Metadata } from 'next';
 import { createMetadata } from '../metadata';
 
 export const metadata: Metadata = createMetadata({
-  title: 'About',
-  description: 'Born from a calling, not a business plan. We\'re a startup studio that does things differently — building tech products for Christian founders who believe business can be a vehicle for Kingdom impact.',
+  title: 'About Us — The Startup Studio for Faith-Driven Founders',
+  description: 'Meet the Odd Shoes team. A faith-driven startup studio building MVPs, SaaS platforms, and mobile apps for Christian founders and faith tech investors worldwide.',
   path: '/about',
+  keywords: [
+    'Odd Shoes team',
+    'faith-driven tech company',
+    'Christian tech startup team',
+    'faith tech builders',
+    'startup studio for missionaries',
+    'Kingdom entrepreneurs',
+  ],
 });
 
 export default function AboutPage() {

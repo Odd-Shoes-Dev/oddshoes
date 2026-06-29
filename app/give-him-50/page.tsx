@@ -5,9 +5,21 @@ import { Metadata } from 'next';
 import { createMetadata } from '../metadata';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Give Him 50',
-  description: '50% of every dollar we earn goes directly to Kingdom work. Not one day. Not eventually. Right now, every single month. Business as worship.',
+  title: 'Give Him 50 — 50% of Profits Fund Kingdom Work',
+  description: '50% of every dollar Odd Shoes earns goes directly to Kingdom work — missions, church planting, and community impact. Business as worship, profit as purpose.',
   path: '/give-him-50',
+  keywords: [
+    'Give Him 50',
+    'business as mission',
+    'faith-based giving',
+    'Christian business giving back',
+    'church planting',
+    'missions funding through business',
+    'Kingdom impact startup',
+    'tithing business profits',
+    'faith-driven investing',
+    'redemptive entrepreneurship',
+  ],
 });
 
 export default function GiveHim50Page() {

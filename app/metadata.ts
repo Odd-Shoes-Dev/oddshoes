@@ -2,28 +2,55 @@ import { Metadata } from 'next';
 
 export const siteMetadata = {
   title: 'Odd Shoes: The Tech Partner for Christian Founders',
-  description: 'No tech co-founder? No $50k budget? We turn your vision into a live MVP in 5–14 days. 100+ shipped, 50% of profits fund missions. Ship your vision today.',
+  description: 'The startup studio for faith-driven founders and investors. No tech co-founder? We turn your vision into a live MVP in 5–14 days. 100+ shipped, 50% of profits fund Kingdom work.',
   url: 'https://oddshoes.dev',
   siteName: 'Odd Shoes',
   locale: 'en_US',
   type: 'website',
 };
 
+const baseKeywords = [
+  'Odd Shoes',
+  'MVP development',
+  'Christian startup accelerator',
+  'faith-based startup studio',
+  'Christian founders',
+  'Christian tech company',
+  'Kingdom business',
+  'faith tech',
+  'faith-driven investors',
+  'Christian venture capital',
+  'faith-based tech startup',
+  'tech for good',
+  'startup studio for Christian founders',
+  'build my startup',
+  'SaaS development',
+  'mobile app development',
+  'startup branding',
+  'hire startup developers',
+  'MVP in 2 weeks',
+  'remote startup studio',
+  'outsource MVP development',
+  'startup CTO as a service',
+];
+
 export function createMetadata({
   title,
   description,
   path = '',
   image = '/og-image.svg',
+  keywords = [],
 }: {
   title?: string;
   description?: string;
   path?: string;
   image?: string;
+  keywords?: string[];
 }): Metadata {
-  const pageTitle = title 
+  const pageTitle = title
     ? `${title} — Odd Shoes`
     : siteMetadata.title;
-  
+
   const pageDescription = description || siteMetadata.description;
   const pageUrl = `${siteMetadata.url}${path}`;
 
@@ -31,17 +58,7 @@ export function createMetadata({
     title: pageTitle,
     description: pageDescription,
     applicationName: siteMetadata.siteName,
-    keywords: [
-      'Christian startup accelerator',
-      'MVP development',
-      'startup studio',
-      'faith-based business',
-      'Kampala startups',
-      'Christian founders',
-      'Kingdom business',
-      'startup branding',
-      'tech for good',
-    ],
+    keywords: [...keywords, ...baseKeywords],
     authors: [{ name: 'Odd Shoes' }],
     creator: 'Odd Shoes',
     publisher: 'Odd Shoes',
