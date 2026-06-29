@@ -34,7 +34,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: '13',
+    id: '15',
     slug: 'solopos',
     name: 'SoloPOS',
     tag: 'POS for small businesses',
@@ -116,7 +116,7 @@ export const projects: Project[] = [
       'Transport and hostel management'
     ]
   }, {
-    id: '6',
+    id: '16',
     slug: 'by-the-fruit',
     name: 'By The Fruit',
     tag: 'Investing in Innovation Known by its Fruit.',
@@ -141,7 +141,7 @@ export const projects: Project[] = [
       'Founder-first hospitality',
     ]
   }, {
-    id: '6',
+    id: '17',
     slug: 'blue-ox-kampus',
     name: 'Blue Ox Kampus',
     tag: 'Raising Builders to Shape Culture.',
@@ -483,7 +483,7 @@ export const projects: Project[] = [
     ]
   },
    {
-    id: '13',
+    id: '18',
     slug: 'bible banter',
     name: 'Bible Banter',
     tag: 'Bible study app',
@@ -512,7 +512,7 @@ export const projects: Project[] = [
    }
    ,
    {
-    id: '13',
+    id: '19',
     slug: 'bible battle',
     name: 'Bible Battle',
     tag: 'Bible study app',

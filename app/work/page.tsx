@@ -68,7 +68,7 @@ export default function WorkPage() {
             <div className="project-cards-grid">
               {filteredProjects.map(project => (
                 <button
-                  key={project.id}
+                  key={project.slug}
                   className="project-card-v2"
                   onClick={() => setSelectedProject(project)}
                   aria-label={`Open ${project.name} details`}
