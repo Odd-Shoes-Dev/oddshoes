@@ -1685,6 +1685,10 @@ p { font-size: 1.05rem; color: var(--gray-600); line-height: 1.8; }
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--gray-200);
+  transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-hidden .filter-bar {
+  top: 0;
 }
 .filter-tabs {
   display: flex;

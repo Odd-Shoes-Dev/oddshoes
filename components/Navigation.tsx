@@ -30,11 +30,15 @@ export default function Navigation() {
     };
 
     window.addEventListener('scroll', controlNavbar, { passive: true });
-    
+
     return () => {
       window.removeEventListener('scroll', controlNavbar);
     };
   }, [lastScrollY]);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('nav-hidden', !isVisible);
+  }, [isVisible]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
