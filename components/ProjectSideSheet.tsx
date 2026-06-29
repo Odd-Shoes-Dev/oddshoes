@@ -26,6 +26,14 @@ export default function ProjectSideSheet({
   useEffect(() => { setSlide(0); }, [project?.slug]);
 
   useEffect(() => {
+    if (count <= 1) return;
+    const interval = setInterval(() => {
+      setSlide((prev) => (prev + 1) % count);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, [count, project?.slug]);
+
+  useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [isOpen]);
