@@ -538,7 +538,58 @@ export const projects: Project[] = [
       'Automated message handling',
       'Scalable cloud infrastructure'
     ]
-  }
+  },
+   {
+    id: '14',
+    slug: 'heart-strings',
+    name: 'Heart Strings',
+    tag: 'A game for two',
+    category: 'mobile',
+    url: 'https://heartstrings.oddshoesdev.xyz',
+    gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    subtitle: 'A game for two',
+    logoPath: '/images/openclawbot/logo.png',
+    logoStyle: 'light',
+    logoText: 'Openclaw',
+    logoBackgroundColor: '#000000',
+    screenshotCount: 1,
+    imageFolder: 'openclaw',
+    overview: 'HeartStrings is designed for Christian couples who want to go beneath the surface, grow in faith together, and build a love that lasts.',
+    challenge: 'Many Christian couples want to deepen their relationship through faith-based conversations, but struggle to find meaningful questions and activities that align with their values. Existing dating apps focus on superficial connections, while Bible study apps are often solitary or lack interactive elements for couples.',
+    solution: 'We built a mobile app that uses AI to scan receipts, extract details, and categorize expenses automatically, with cloud backup and export features.',
+    techStack: ['React Native', 'Python', 'OpenAI API', 'Telegram Bot API', 'Discord API', 'WhatsApp API'],
+    features: [
+      'Daily faith-based conversation prompts',
+    ]
+   },
+   {
+    id: '15',
+    slug: 'vowley',
+    name: 'Vowley',
+    tag: 'Wedding Planning App',
+    category: 'mobile',
+    url: 'https://vowley.app',
+    gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    subtitle: 'Deploy AI assistants to any channel in seconds',
+    logoPath: '/images/openclawbot/logo.png',
+    logoStyle: 'light',
+    logoText: 'Openclaw',
+    logoBackgroundColor: '#000000',
+    screenshotCount: 1,
+    imageFolder: 'openclaw',
+    overview: 'Open-Clawbot is an AI assistant deployment platform that allows businesses to quickly deploy conversational AI bots across multiple messaging channels including Telegram, Discord, and WhatsApp.',
+    challenge: 'Businesses struggle to deploy and manage AI assistants across multiple messaging platforms, requiring separate integrations and technical expertise for each channel.',
+    solution: 'We built a unified platform that enables one-click deployment of AI assistants to multiple messaging channels, with seamless integration and centralized management.',
+    techStack: ['Next.js', 'Python', 'OpenAI API', 'Telegram Bot API', 'Discord API', 'WhatsApp API'],
+    features: [
+      'Deploy AI assistants in seconds',
+      'Multi-channel support (Telegram, Discord, WhatsApp)',
+      'Google authentication for easy onboarding',
+      'Centralized bot management dashboard',
+      'Automated message handling',
+      'Scalable cloud infrastructure'
+    ]
+   }
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
